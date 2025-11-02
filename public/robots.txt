@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/sitemap.xml
+Sitemap: https://файер-шоу-74.рф/sitemap.xml
 
 # Основные поисковые боты
 User-agent: Googlebot
