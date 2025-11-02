@@ -557,7 +557,7 @@ const Index = () => {
             </div>
             <div className="group p-4 md:p-0">
               <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 md:mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">
-                10+
+                7+
               </div>
               <div className="text-sm sm:text-base md:text-lg text-muted-foreground">
                 <Icon name="Award" size={20} className="inline mb-1 text-primary" />
@@ -1237,7 +1237,7 @@ const Index = () => {
         href="https://wa.me/79085740813"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
+        className="fixed bottom-6 left-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
         aria-label="Написать в WhatsApp"
       >
         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -1248,7 +1248,7 @@ const Index = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 w-12 h-12 md:w-14 md:h-14 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
+          className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
           aria-label="Наверх"
         >
           <Icon name="ArrowUp" size={24} />
