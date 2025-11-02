@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://outcast-fire-show.poehali.app/sitemap.xml
+Sitemap: https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/sitemap.xml
 
 # Основные поисковые боты
 User-agent: Googlebot
