@@ -92,8 +92,7 @@ const Index = () => {
                       calculatorData.programType === 'trailer' ? 30000 : 32000;
     const durationMultiplier = parseInt(calculatorData.duration) / 6;
     const artistsBonus = (parseInt(calculatorData.artists) - 2) * 5000;
-    const distanceBonus = parseInt(calculatorData.distance) > 50 ? 
-                          (parseInt(calculatorData.distance) - 50) * 50 : 0;
+    const distanceBonus = parseInt(calculatorData.distance) * 35;
     
     const total = Math.max(basePrice * durationMultiplier + artistsBonus + distanceBonus, basePrice);
     return Math.round(total);
@@ -366,7 +365,7 @@ const Index = () => {
     },
     {
       question: "Как происходит оплата?",
-      answer: "Для бронирования даты требуется предоплата 30%. Оставшаяся сумма оплачивается в день выступления наличными или по безналичному расчёту. Мы предоставляем все необходимые документы для юридических лиц."
+      answer: "Для бронирования даты требуется предоплата 50%. Оставшаяся сумма оплачивается в день выступления наличными или по безналичному расчёту. Мы предоставляем все необходимые документы для юридических лиц."
     },
     {
       question: "За сколько нужно бронировать выступление?",
