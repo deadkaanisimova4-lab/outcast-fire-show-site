@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Главная страница -->
+  <url>
+    <loc>https://outcast-fire-show.poehali.app/</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg</image:loc>
+      <image:title>OUTCAST Fire Show - Огненное шоу в Челябинске</image:title>
+      <image:caption>Профессиональное огненное шоу для свадеб, корпоративов и праздников</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Раздел О нас -->
+  <url>
+    <loc>https://outcast-fire-show.poehali.app/#about</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Раздел Программы -->
+  <url>
+    <loc>https://outcast-fire-show.poehali.app/#programs</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Раздел Галерея -->
+  <url>
+    <loc>https://outcast-fire-show.poehali.app/#gallery</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Раздел Калькулятор -->
+  <url>
+    <loc>https://outcast-fire-show.poehali.app/#calculator</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Раздел FAQ -->
+  <url>
+    <loc>https://outcast-fire-show.poehali.app/#faq</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Раздел Контакты -->
+  <url>
+    <loc>https://outcast-fire-show.poehali.app/#contact</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
