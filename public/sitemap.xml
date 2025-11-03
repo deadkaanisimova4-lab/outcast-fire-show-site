@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Главная страница -->
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,5 +12,4 @@
       <image:caption>Профессиональное огненное шоу для свадеб, корпоративов и праздников</image:caption>
     </image:image>
   </url>
-
 </urlset>
