@@ -4,7 +4,7 @@
   
   <!-- Главная страница -->
   <url>
-    <loc>https://файер-шоу-74.рф/</loc>
+    <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/</loc>
     <lastmod>2025-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -13,54 +13,6 @@
       <image:title>OUTCAST Fire Show - Огненное шоу в Челябинске</image:title>
       <image:caption>Профессиональное огненное шоу для свадеб, корпоративов и праздников</image:caption>
     </image:image>
-  </url>
-
-  <!-- Раздел О нас -->
-  <url>
-    <loc>https://файер-шоу-74.рф/#about</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Раздел Программы -->
-  <url>
-    <loc>https://файер-шоу-74.рф/#programs</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Раздел Галерея -->
-  <url>
-    <loc>https://файер-шоу-74.рф/#gallery</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Раздел Калькулятор -->
-  <url>
-    <loc>https://файер-шоу-74.рф/#calculator</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Раздел FAQ -->
-  <url>
-    <loc>https://файер-шоу-74.рф/#faq</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Раздел Контакты -->
-  <url>
-    <loc>https://файер-шоу-74.рф/#contact</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
 </urlset>
