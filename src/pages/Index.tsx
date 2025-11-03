@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
+import SEOContent from '@/components/SEOContent';
 
 const Index = () => {
   const { toast } = useToast();
@@ -402,7 +403,7 @@ const Index = () => {
             <div className="flex items-center gap-3">
               <img 
                 src="https://cdn.poehali.dev/files/6542e7b2-83ab-46b5-8dee-6d7f743b92c4.jpg" 
-                alt="OUTCAST Logo" 
+                alt="OUTCAST Fire Show - профессиональное огненное шоу в Челябинске" 
                 className="h-12 w-auto object-contain logo-animate cursor-pointer"
                 onClick={() => scrollToSection('home')}
               />
@@ -858,7 +859,7 @@ const Index = () => {
                   >
                     <img 
                       src={image.url} 
-                      alt={image.title}
+                      alt={`Огненное шоу Челябинск OUTCAST - ${image.title} - файер-шоу с пиротехникой на праздник`}
                       loading="lazy"
                       className="w-full h-full object-cover gallery-image transition-transform duration-500 group-hover:scale-110"
                     />
@@ -875,7 +876,7 @@ const Index = () => {
                   <>
                     <img 
                       src={image.url} 
-                      alt={image.title}
+                      alt={`Файер-шоу Челябинск - ${image.title} - профессиональное пиротехническое шоу OUTCAST`}
                       loading="lazy"
                       className="w-full h-full object-cover gallery-image transition-transform duration-500 group-hover:scale-110"
                     />
@@ -988,7 +989,7 @@ const Index = () => {
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={testimonial.photo} 
-                      alt={testimonial.name}
+                      alt={`Отзыв о файер-шоу OUTCAST Челябинск - ${testimonial.event} - ${testimonial.name}`}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
@@ -1056,6 +1057,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <SEOContent />
 
       <section id="contacts" className="py-12 md:py-20 bg-gradient-to-b from-card to-black scroll-reveal">
         <div className="container mx-auto px-4">
@@ -1262,7 +1265,7 @@ const Index = () => {
               <div className="flex items-center gap-3">
                 <img 
                   src="https://cdn.poehali.dev/files/6542e7b2-83ab-46b5-8dee-6d7f743b92c4.jpg" 
-                  alt="OUTCAST Logo" 
+                  alt="OUTCAST - огненное шоу в Челябинске, файер-шоу на свадьбу и корпоратив" 
                   className="h-8 w-auto object-contain logo-animate cursor-pointer"
                   onClick={() => scrollToSection('home')}
                 />
