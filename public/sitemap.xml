@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/</loc>
     <lastmod>2025-11-03</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg</image:loc>
-      <image:title>OUTCAST Fire Show - Огненное шоу в Челябинске</image:title>
-      <image:caption>Профессиональное огненное шоу для свадеб, корпоративов и праздников</image:caption>
-    </image:image>
   </url>
 </urlset>
