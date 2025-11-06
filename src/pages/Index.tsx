@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 import SEOContent from '@/components/SEOContent';
+import ReviewWidget from '@/components/ReviewWidget';
 
 const Index = () => {
   const { toast } = useToast();
@@ -1310,6 +1311,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <ReviewWidget />
     </div>
   );
 };
