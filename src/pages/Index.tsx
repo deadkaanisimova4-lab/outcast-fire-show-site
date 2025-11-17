@@ -1088,7 +1088,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Телефон</h4>
-                  <a href="tel:+79518152553" className="text-muted-foreground hover:text-primary transition-colors">+7 (951) 815-25-53</a>
+                  <a href="tel:+89085740813" className="text-muted-foreground hover:text-primary transition-colors">+7 (908) 574-08-13</a>
                 </div>
               </div>
 
@@ -1293,7 +1293,7 @@ const Index = () => {
                   <Icon name="Instagram" size={20} className="text-primary" />
                 </a>
                 <a 
-                  href="https://wa.me/79000000000" 
+                  href="https://wa.me/89085740813" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary/30 transition-all hover-scale"

@@ -30,7 +30,7 @@ const ContactFormWidget = () => {
 
     setIsSubmitting(true);
 
-    const whatsappNumber = '79518152553';
+    const whatsappNumber = '89085740813';
     const text = `🔥 *Новая заявка с сайта!*
 
 👤 *Имя:* ${formData.name}
@@ -147,7 +147,7 @@ const ContactFormWidget = () => {
 
           <div className="mt-4 pt-4 border-t border-border">
             <p className="text-xs text-center text-muted-foreground">
-              📞 Или звоните: <a href="tel:+79518152553" className="text-green-500 font-semibold hover:underline">+7 (951) 815-25-53</a>
+              📞 Или звоните: <a href="tel:+89085740813" className="text-green-500 font-semibold hover:underline">+7 (908) 574-08-13</a>
             </p>
           </div>
         </CardContent>
