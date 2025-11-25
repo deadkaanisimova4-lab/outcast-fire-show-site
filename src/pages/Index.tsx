@@ -415,6 +415,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('installations')} className="hover:text-primary transition-colors">Инсталляции</button>
               <button onClick={() => scrollToSection('gallery')} className="hover:text-primary transition-colors">Галерея</button>
               <button onClick={() => scrollToSection('prices')} className="hover:text-primary transition-colors">Цены</button>
+              <a href="/blog" className="hover:text-primary transition-colors">Блог</a>
               <button onClick={() => scrollToSection('contacts')} className="hover:text-primary transition-colors">Контакты</button>
             </div>
             <div className="flex items-center gap-4">

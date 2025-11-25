@@ -1,0 +1,130 @@
+import { Link } from 'react-router-dom';
+import Icon from '@/components/ui/icon';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+const BlogIndex = () => {
+  const articles = [
+    {
+      id: 'kak-vybrat-ognennoe-shou-dlya-svadby',
+      title: 'Как выбрать огненное шоу для свадьбы',
+      description: 'Полный гид по выбору идеального файер-шоу для вашего торжества. Что учесть, какую программу выбрать и как не переплатить.',
+      image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
+      date: '25 ноября 2024',
+      readTime: '7 минут'
+    },
+    {
+      id: 'top-5-ploshchadok-v-chelyabinske-dlya-faier-shou',
+      title: 'Топ-5 площадок в Челябинске для файер-шоу',
+      description: 'Лучшие локации для огненного шоу в Челябинске: рестораны, загородные комплексы и открытые площадки. С ценами и контактами.',
+      image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
+      date: '25 ноября 2024',
+      readTime: '6 минут'
+    },
+    {
+      id: 'chto-takoe-faier-shou-vidy-i-stili',
+      title: 'Что такое файер-шоу: виды и стили',
+      description: 'Всё, что нужно знать о файер-шоу: история, виды реквизита, стили выступлений и современные тренды в огненных постановках.',
+      image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
+      date: '25 ноября 2024',
+      readTime: '8 минут'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">
+        <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
+            <Icon name="Flame" size={32} />
+            <span>OUTCAST Fire Show</span>
+          </Link>
+          
+          <Link to="/">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-black">
+              <Icon name="Home" size={18} className="mr-2" />
+              На главную
+            </Button>
+          </Link>
+        </nav>
+      </header>
+
+      <main className="pt-24 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-yellow-500 to-orange-600 text-transparent bg-clip-text">
+              Блог об огненном шоу
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Полезные статьи о файер-шоу: как выбрать программу, где провести выступление и что нужно знать организаторам
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {articles.map((article) => (
+              <Link 
+                key={article.id} 
+                to={`/blog/${article.id}`}
+                className="group"
+              >
+                <Card className="h-full bg-gray-900/50 border-gray-800 hover:border-primary/50 transition-all duration-300 overflow-hidden group-hover:shadow-[0_0_30px_rgba(255,107,53,0.3)]">
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60" />
+                  </div>
+                  
+                  <CardHeader>
+                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                      <span className="flex items-center gap-1">
+                        <Icon name="Calendar" size={14} />
+                        {article.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Icon name="Clock" size={14} />
+                        {article.readTime}
+                      </span>
+                    </div>
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                      {article.title}
+                    </CardTitle>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <CardDescription className="text-gray-400">
+                      {article.description}
+                    </CardDescription>
+                    
+                    <Button 
+                      variant="ghost" 
+                      className="mt-4 text-primary hover:text-primary hover:bg-primary/10 p-0"
+                    >
+                      Читать полностью
+                      <Icon name="ArrowRight" size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      <footer className="bg-black/50 border-t border-gray-800 py-8">
+        <div className="container mx-auto px-4 text-center text-gray-400">
+          <p>© 2024 OUTCAST Fire Show. Все права защищены.</p>
+          <p className="mt-2">
+            <a href="tel:+79085740813" className="text-primary hover:text-primary/80">
+              +7 (908) 574-08-13
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default BlogIndex;
