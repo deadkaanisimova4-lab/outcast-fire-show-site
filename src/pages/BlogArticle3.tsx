@@ -1,9 +1,18 @@
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import BlogMeta from '@/components/BlogMeta';
 
 const BlogArticle3 = () => {
   return (
+    <>
+      <BlogMeta
+        title="Что такое файер-шоу: виды, стили и реквизит — Полный гид от OUTCAST"
+        description="Всё о файер-шоу: 6 видов реквизита, 6 стилей выступления, спецэффекты, техника безопасности. Подробный гид от профессионалов огненного искусства OUTCAST Fire Show."
+        keywords="что такое файер-шоу, виды огненного шоу, файер-шоу реквизит, стили огненного шоу, fire show, огненное искусство, пои огонь, стафф огонь"
+        url="https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/chto-takoe-faier-shou-vidy-i-stili"
+        image="https://cdn.poehali.dev/files/10e15dc7-2136-468b-a52f-6e4c74eda592.jpg"
+      />
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -370,7 +379,7 @@ const BlogArticle3 = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">LED-реквизит</h3>
                     <p className="text-gray-300 text-sm">
-                      Светящиеся пои, стаффы и обручи. Можно использовать в закрытых помещениях с низкими потолками.
+                      Светящиеся пои, стаффы и обручи с яркими светодиодами. Создают красивые световые узоры.
                     </p>
                   </div>
                 </div>
@@ -382,7 +391,31 @@ const BlogArticle3 = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Холодные фонтаны</h3>
                     <p className="text-gray-300 text-sm">
-                      Безопасные искры, которые не обжигают. Можно использовать близко к зрителям и в небольших помещениях.
+                      Безопасные искры, которые не обжигают. Можно использовать близко к зрителям.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <Icon name="Zap" size={24} className="text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Отстрелы салютов</h3>
+                    <p className="text-gray-300 text-sm">
+                      Профессиональная пиротехника для зрелищного финала. Создаёт незабываемый wow-эффект!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <Icon name="Sparkles" size={24} className="text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Ручные фейерверки</h3>
+                    <p className="text-gray-300 text-sm">
+                      Компактные фейерверки, которые артисты держат в руках. Добавляют динамики в выступление.
                     </p>
                   </div>
                 </div>
@@ -546,6 +579,7 @@ const BlogArticle3 = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 

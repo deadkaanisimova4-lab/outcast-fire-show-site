@@ -1,9 +1,18 @@
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import BlogMeta from '@/components/BlogMeta';
 
 const BlogArticle2 = () => {
   return (
+    <>
+      <BlogMeta
+        title="Топ-5 площадок в Челябинске для файер-шоу — Обзор от OUTCAST Fire Show"
+        description="Лучшие места для огненного шоу в Челябинске: загородные комплексы, рестораны, открытые площадки. Полная информация, адреса, цены, критерии выбора."
+        keywords="площадки для огненного шоу челябинск, где провести файер-шоу, загородные комплексы челябинск, рестораны челябинск огненное шоу, площадки для файер-шоу"
+        url="https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/top-5-ploshchadok-v-chelyabinske-dlya-faier-shou"
+        image="https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg"
+      />
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -145,7 +154,7 @@ const BlogArticle2 = () => {
 
             <h2 className="text-3xl font-bold text-primary mb-6 mt-12 flex items-center gap-3">
               <span className="bg-gradient-to-r from-primary to-orange-500 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold">2</span>
-              Ресторан "Пётр I"
+              Загородный комплекс "Усадьба" (Сугояк)
             </h2>
 
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-8">
@@ -155,15 +164,15 @@ const BlogArticle2 = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start gap-2">
                       <Icon name="MapPin" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Адрес: ул. Кирова, 120</span>
+                      <span>Адрес: пос. Сугояк, ул. Центральная, 15</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Users" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Вместимость: до 120 гостей</span>
+                      <span>Вместимость: до 180 гостей</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="DollarSign" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Банкет: от 2500₽/чел</span>
+                      <span>Аренда: от 55 000₽/день</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Phone" size={18} className="text-primary mt-1 flex-shrink-0" />
@@ -176,33 +185,33 @@ const BlogArticle2 = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Потолки 6 метров</span>
+                      <span>Просторная открытая площадка</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Керамогранит на полу</span>
+                      <span>Асфальтированное покрытие</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Сцена 5×6 метров</span>
+                      <span>Красивый природный фон</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Профессиональная вентиляция</span>
+                      <span>Территория 10×12 метров</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="bg-primary/10 rounded-lg p-4 mt-4">
                 <p className="text-gray-300">
-                  <strong className="text-white">Наш опыт:</strong> Топовая площадка для корпоративов и свадеб. Высокие потолки позволяют использовать весь арсенал трюков. Администрация лояльна к огненным шоу.
+                  <strong className="text-white">Наш опыт:</strong> Отличная площадка на природе для свадеб и корпоративов. Живописная территория на берегу озера создаёт романтическую атмосферу. Огненное шоу под открытым небом здесь смотрится особенно эффектно!
                 </p>
               </div>
             </div>
 
             <h2 className="text-3xl font-bold text-primary mb-6 mt-12 flex items-center gap-3">
               <span className="bg-gradient-to-r from-primary to-orange-500 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold">3</span>
-              Концерт-холл "Аврора"
+              Парк-отель "Урал"
             </h2>
 
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-8">
@@ -212,15 +221,15 @@ const BlogArticle2 = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start gap-2">
                       <Icon name="MapPin" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Адрес: пр. Ленина, 54</span>
+                      <span>Адрес: Челябинский тракт, 25 км</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Users" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Вместимость: до 500 гостей</span>
+                      <span>Вместимость: до 300 гостей</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="DollarSign" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Аренда: от 80 000₽/день</span>
+                      <span>Аренда: от 70 000₽/день</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Phone" size={18} className="text-primary mt-1 flex-shrink-0" />
@@ -233,11 +242,11 @@ const BlogArticle2 = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Огромная сцена 12×8 метров</span>
+                      <span>Большая открытая площадка 15×12 метров</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Потолки 8 метров</span>
+                      <span>Безопасное бетонное покрытие</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
@@ -245,14 +254,14 @@ const BlogArticle2 = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Опыт проведения файер-шоу</span>
+                      <span>Удобный подъезд для оборудования</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="bg-primary/10 rounded-lg p-4 mt-4">
                 <p className="text-gray-300">
-                  <strong className="text-white">Наш опыт:</strong> Лучшая площадка для масштабных мероприятий. Здесь можно реализовать самые сложные постановки. Отличная акустика и профессиональное техническое оснащение.
+                  <strong className="text-white">Наш опыт:</strong> Премиальная площадка для масштабных корпоративов и свадеб. Большая территория даёт развернуться на полную. Живописный вид на лес создаёт особую атмосферу.
                 </p>
               </div>
             </div>
@@ -316,7 +325,7 @@ const BlogArticle2 = () => {
 
             <h2 className="text-3xl font-bold text-primary mb-6 mt-12 flex items-center gap-3">
               <span className="bg-gradient-to-r from-primary to-orange-500 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold">5</span>
-              Лофт-пространство "Завод"
+              Ресторан "Палермо"
             </h2>
 
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-8">
@@ -326,15 +335,15 @@ const BlogArticle2 = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start gap-2">
                       <Icon name="MapPin" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Адрес: ул. Труда, 88</span>
+                      <span>Адрес: ул. Свободы, 166</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Users" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Вместимость: до 150 гостей</span>
+                      <span>Вместимость: до 200 гостей</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="DollarSign" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Аренда: от 40 000₽/день</span>
+                      <span>Банкет: от 3000₽/чел</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Phone" size={18} className="text-primary mt-1 flex-shrink-0" />
@@ -347,26 +356,26 @@ const BlogArticle2 = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Потолки 7 метров</span>
+                      <span>Открытая летняя площадка</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Бетонные полы</span>
+                      <span>Просторная терраса 8×10 метров</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Индустриальный стиль</span>
+                      <span>Итальянская атмосфера</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Flame" size={18} className="text-primary mt-1 flex-shrink-0" />
-                      <span>Огонь отлично смотрится на фото</span>
+                      <span>Огонь создаёт эффектные фото</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="bg-primary/10 rounded-lg p-4 mt-4">
                 <p className="text-gray-300">
-                  <strong className="text-white">Наш опыт:</strong> Модная площадка для современных мероприятий. Кирпичные стены и металлические конструкции создают брутальную атмосферу. Огненное шоу здесь выглядит особенно эффектно!
+                  <strong className="text-white">Наш опыт:</strong> Уютная площадка с открытой террасой для камерных мероприятий. Средиземноморский стиль интерьера создаёт особую атмосферу. Выступаем здесь только на открытой площадке!
                 </p>
               </div>
             </div>
@@ -393,17 +402,17 @@ const BlogArticle2 = () => {
                     <td className="p-3">⭐⭐⭐⭐⭐</td>
                   </tr>
                   <tr className="border-b border-gray-800">
-                    <td className="p-3">Пётр I</td>
-                    <td className="p-3">Ресторан</td>
-                    <td className="p-3">до 120</td>
-                    <td className="p-3">от 2500₽/чел</td>
+                    <td className="p-3">Усадьба (Сугояк)</td>
+                    <td className="p-3">Загородная</td>
+                    <td className="p-3">до 180</td>
+                    <td className="p-3">от 55 000₽</td>
                     <td className="p-3">⭐⭐⭐⭐⭐</td>
                   </tr>
                   <tr className="border-b border-gray-800">
-                    <td className="p-3">Аврора</td>
-                    <td className="p-3">Концерт-холл</td>
-                    <td className="p-3">до 500</td>
-                    <td className="p-3">от 80 000₽</td>
+                    <td className="p-3">Парк-отель Урал</td>
+                    <td className="p-3">Загородная</td>
+                    <td className="p-3">до 300</td>
+                    <td className="p-3">от 70 000₽</td>
                     <td className="p-3">⭐⭐⭐⭐⭐</td>
                   </tr>
                   <tr className="border-b border-gray-800">
@@ -414,10 +423,10 @@ const BlogArticle2 = () => {
                     <td className="p-3">⭐⭐⭐⭐⭐</td>
                   </tr>
                   <tr>
-                    <td className="p-3">Завод</td>
-                    <td className="p-3">Лофт</td>
-                    <td className="p-3">до 150</td>
-                    <td className="p-3">от 40 000₽</td>
+                    <td className="p-3">Палермо</td>
+                    <td className="p-3">Ресторан (терраса)</td>
+                    <td className="p-3">до 200</td>
+                    <td className="p-3">от 3000₽/чел</td>
                     <td className="p-3">⭐⭐⭐⭐⭐</td>
                   </tr>
                 </tbody>
@@ -515,6 +524,7 @@ const BlogArticle2 = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 

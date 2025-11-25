@@ -1,9 +1,18 @@
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import BlogMeta from '@/components/BlogMeta';
 
 const BlogArticle1 = () => {
   return (
+    <>
+      <BlogMeta
+        title="Как выбрать огненное шоу для свадьбы в Челябинске — Гид от OUTCAST Fire Show"
+        description="Полное руководство по выбору файер-шоу на свадьбу: какие программы бывают, как подобрать под формат, что важно учесть. Советы от профессионалов OUTCAST Fire Show с опытом 7+ лет."
+        keywords="огненное шоу на свадьбу, файер-шоу цена челябинск, заказать огненное шоу на свадьбу, как выбрать файер-шоу, свадебное огненное шоу челябинск, выступление с огнем на свадьбу"
+        url="https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/kak-vybrat-ognennoe-shou-dlya-svadby"
+        image="https://cdn.poehali.dev/files/d524fd97-2aa3-484d-ae46-9fa3748e5790.jpg"
+      />
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -383,6 +392,7 @@ const BlogArticle1 = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 
