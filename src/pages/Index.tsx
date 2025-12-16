@@ -9,6 +9,7 @@ import SEOContent from '@/components/SEOContent';
 import ContactFormWidget from '@/components/ContactFormWidget';
 import SnowEffect from '@/components/SnowEffect';
 import ChristmasLights from '@/components/ChristmasLights';
+import PerformanceMap from '@/components/PerformanceMap';
 
 const Index = () => {
   const { toast } = useToast();
@@ -526,7 +527,7 @@ const Index = () => {
               FIRE SHOW
             </p>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-3 md:mb-4 max-w-2xl mx-auto px-4">
-              Огненное шоу для вашего праздника в Челябинске
+              Огненное шоу для вашего праздника
             </p>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground/80 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
               Профессиональное файер-шоу на свадьбу, корпоратив, день рождения и любое торжество
@@ -1203,6 +1204,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <PerformanceMap />
 
       <section className="py-20 bg-gradient-to-b from-black to-card scroll-reveal">
         <div className="container mx-auto px-4">

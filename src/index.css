@@ -249,6 +249,25 @@
     }
   }
 
+  /* Кастомный скроллбар для карты */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f97316, #dc2626);
+    border-radius: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ea580c, #b91c1c);
+  }
+
   .scroll-reveal {
     opacity: 0;
     transform: translateY(30px);
