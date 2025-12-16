@@ -526,10 +526,10 @@ const Index = () => {
               FIRE SHOW
             </p>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-3 md:mb-4 max-w-2xl mx-auto px-4">
-              Завораживающее зрелище уличного перформанса
+              Огненное шоу для вашего праздника в Челябинске
             </p>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground/80 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
-              Мы делаем не просто шоу... мы задаём атмосферу! 
+              Профессиональное файер-шоу на свадьбу, корпоратив, день рождения и любое торжество
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4 justify-center mb-8 md:mb-12 text-sm sm:text-base md:text-lg">
               <div className="flex items-center gap-2">
