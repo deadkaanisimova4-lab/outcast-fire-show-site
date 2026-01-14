@@ -548,6 +548,43 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-12 md:py-20 bg-gradient-to-b from-black via-primary/5 to-black scroll-reveal">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 fire-glow">
+              Постановка «TRAILER» в действии
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Взрыв спецэффектов, огонь и пиротехника. Это то, что получают наши клиенты! 🔥
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/30 hover:border-primary/60 transition-all group">
+            <div className="aspect-video bg-black">
+              <iframe
+                src="https://vk.com/video_ext.php?oid=-203229964&id=456239833&hash=6d750a5492e6fb9e"
+                width="100%"
+                height="100%"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+                frameBorder="0"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <div className="mt-6 text-center">
+            <Button 
+              size="lg"
+              onClick={() => scrollToSection('programs')}
+              className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
+            >
+              <Icon name="Sparkles" size={20} className="mr-2" />
+              Смотреть все программы
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-b from-black to-card scroll-reveal">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
