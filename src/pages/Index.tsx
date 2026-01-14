@@ -311,39 +311,39 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Анна Соколова",
-      event: "Свадьба",
+      name: "Юлия Цветкова",
+      event: "Праздник",
       rating: 5,
-      text: "Церемония зажжения сердец стала изюминкой нашей свадьбы! Все гости были в восторге. Профессионализм на высшем уровне, каждый элемент продуман до мелочей. Спасибо за незабываемый вечер!",
+      text: "Вы - одно из лучших шоу в нашем городе! Молодцы! Приехали вовремя, провели шоу мастерски, гостям всем понравилось. Горящие символы, фонтаны, салют - всё было классно! Успехов вам и дальнейшего процветания! ❤️",
       photo: "https://cdn.poehali.dev/files/d524fd97-2aa3-484d-ae46-9fa3748e5790.jpg"
     },
     {
-      name: "Дмитрий Петров",
-      event: "Корпоратив",
+      name: "Аня Ваганова",
+      event: "Мероприятие",
       rating: 5,
-      text: "Заказывали уличный перформанс на корпоративное мероприятие. OUTCAST создали невероятную атмосферу, коллеги до сих пор обсуждают огненное шоу. Мобильные, профессиональные, зрелищные!",
+      text: "Здравствуйте, спасибо вам! Всем очень понравилось 💗💗💗",
       photo: "https://cdn.poehali.dev/files/282a58c5-553c-4af6-b6e2-c9bf922c59c0.jpg"
     },
     {
-      name: "Елена Морозова",
-      event: "День рождения",
+      name: "Валентина Кашутина",
+      event: "Праздник",
       rating: 5,
-      text: "Заказывали полное шоу для юбилея. Огненное представление стало главным событием вечера! Безопасно, зрелищно, каждый элемент продуман. Огромное спасибо команде OUTCAST!",
-      photo: "https://cdn.poehali.dev/files/eea5efad-8935-495e-b7c3-72a69ac50926.jpg"
+      text: "Девочки, вы просто волшебницы! Были случайными зрителями вашего шоу, мы такого вообще никогда не видели, мурашило от начала и до конца. Очень грамотно построено выступление, эмоции по нарастающей. И огромное спасибо за фото с сыном, ребёнок в восторге! 😍😍😍",
+      photo: "https://cdn.poehali.dev/files/IMG_3169.png"
     },
     {
-      name: "Михаил Иванов",
-      event: "Юбилей компании",
+      name: "Ira Gileva",
+      event: "Праздник",
       rating: 5,
-      text: "Выступление было потрясающим! Сотрудники в восторге, а гости до сих пор спрашивают контакты. Очень красивое и профессиональное шоу, рекомендую!",
+      text: "Спасибо большое, что даже такую небольшую площадку смогли украсить яркими эмоциями 🔥 Из-за запрета на фейерверки было принято решение найти альтернативу. Места было не много, поэтому нам помогли подобрать оптимальный вариант! Все прошло красиво, качественно и профессионально! ✨✨✨🤍✨✨✨",
+      photo: "https://cdn.poehali.dev/files/IMG_3169.png"
+    },
+    {
+      name: "Мазда",
+      event: "Огненное шоу / Огненные сердца / Артисты",
+      rating: 5,
+      text: "Ну что правдивый отзыв, эти девушки настолько прекрасно выступили что еще годами мбудем вспоминать, их место где то на телевизоре, но они решили радовать нас за очень маленькое вознаграждение по сравнению с их стараниями. Какие эмоции они принесли нам и гостям все были просто в шоке, красивые очень и улыбка с их лица не сходила, они кайфуют от того что делают, такого что они делают не видел не где, это просто заглядение + сделали подарок. Спасибо вам большое 27.07.2024 🔥",
       photo: "https://cdn.poehali.dev/files/5e28f939-32a0-48c9-bc22-4e027c463c35.jpg"
-    },
-    {
-      name: "Ольга Смирнова",
-      event: "День рождения",
-      rating: 5,
-      text: "Невероятное зрелище! Ребята настоящие профессионалы. Весь праздник прошел на высшем уровне. Спасибо за яркие эмоции и незабываемые впечатления!",
-      photo: "https://cdn.poehali.dev/files/f96a2f13-fff3-4d64-8cb3-5ad8fd87d693.jpg"
     }
   ];
 
@@ -1013,61 +1013,92 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="testimonials" className="py-12 md:py-20 bg-black scroll-reveal">
+      <section id="testimonials" className="py-12 md:py-20 bg-gradient-to-b from-black via-primary/5 to-black scroll-reveal">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 fire-glow">Отзывы клиентов</h2>
           <p className="text-center text-sm sm:text-base text-muted-foreground mb-8 md:mb-12 px-4">
-            Что говорят о нас наши клиенты
+            Живые эмоции от тех, кто уже выбрал OUTCAST 🔥
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}
-                className="bg-card border-primary/20 hover:border-primary/50 transition-all hover-scale overflow-hidden"
+                className="bg-gradient-to-br from-card via-card to-card/50 border-2 border-primary/20 hover:border-primary/60 transition-all hover-scale overflow-hidden group relative"
               >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
                 {testimonial.photo && (
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden">
                     <img 
                       src={testimonial.photo} 
                       alt={`Отзыв о файер-шоу OUTCAST Челябинск - ${testimonial.event} - ${testimonial.name}`}
                       loading="lazy"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
-                  </div>
-                )}
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <CardTitle className="text-xl">{testimonial.name}</CardTitle>
-                      <CardDescription className="text-sm">{testimonial.event}</CardDescription>
-                    </div>
-                    <div className="flex gap-1">
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent"></div>
+                    <div className="absolute top-3 right-3 flex gap-1 bg-black/70 px-3 py-1 rounded-full backdrop-blur-sm">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Icon key={i} name="Star" size={16} className="text-secondary fill-secondary" />
+                        <Icon 
+                          key={i} 
+                          name="Star" 
+                          size={14} 
+                          className="text-secondary fill-secondary animate-pulse" 
+                          style={{ animationDelay: `${i * 0.1}s` }}
+                        />
                       ))}
                     </div>
                   </div>
+                )}
+                
+                <CardHeader className="relative pb-3">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <CardTitle className="text-lg font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text">
+                        {testimonial.name}
+                      </CardTitle>
+                      <CardDescription className="text-xs text-primary/80 font-medium flex items-center gap-1 mt-1">
+                        <Icon name="Flame" size={12} className="animate-flicker" />
+                        {testimonial.event}
+                      </CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex items-start gap-2">
-                    <Icon name="Quote" size={24} className="text-primary/50 flex-shrink-0" />
-                    <p className="text-muted-foreground italic">{testimonial.text}</p>
+                
+                <CardContent className="relative pt-0">
+                  <div className="flex items-start gap-3">
+                    <Icon name="Quote" size={28} className="text-primary/30 flex-shrink-0 -mt-1" />
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {testimonial.text}
+                    </p>
                   </div>
                 </CardContent>
-                <CardFooter className="pt-0">
+                
+                <CardFooter className="pt-4 border-t border-primary/10 relative">
                   <a 
                     href="https://vk.com/topic-203229964_47521361"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-primary hover:underline"
+                    className="text-xs text-primary hover:text-accent transition-colors flex items-center gap-1 font-medium group/link"
                   >
-                    Больше отзывов в VK →
+                    Еще отзывы в VK
+                    <Icon name="ArrowRight" size={14} className="group-hover/link:translate-x-1 transition-transform" />
                   </a>
                 </CardFooter>
               </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => window.open('https://vk.com/topic-203229964_47521361', '_blank')}
+              size="lg"
+              variant="outline"
+              className="border-2 border-primary/50 hover:border-primary hover:bg-primary/10"
+            >
+              <Icon name="MessageCircle" size={20} className="mr-2" />
+              Читать все отзывы
+            </Button>
           </div>
         </div>
       </section>
