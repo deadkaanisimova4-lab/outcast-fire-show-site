@@ -7,8 +7,7 @@ import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 import SEOContent from '@/components/SEOContent';
 import ContactFormWidget from '@/components/ContactFormWidget';
-import SnowEffect from '@/components/SnowEffect';
-import ChristmasLights from '@/components/ChristmasLights';
+
 import PerformanceMap from '@/components/PerformanceMap';
 
 const Index = () => {
@@ -384,7 +383,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      <SnowEffect />
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-black border-b border-primary/20 p-2">
         <div className="flex items-center justify-center gap-2">
           <a href="tel:+79518152553" className="flex-1 flex items-center justify-center gap-2 bg-primary/20 hover:bg-primary/30 py-2 px-3 rounded-lg transition-colors">
@@ -507,7 +505,6 @@ const Index = () => {
       </nav>
 
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20">
-        <ChristmasLights />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black"></div>
         <div id="particles-container" className="absolute inset-0 overflow-hidden"></div>
         <div className="absolute inset-0 opacity-30">
@@ -517,9 +514,6 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="animate-fade-in">
-            <div className="mb-4 text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-400 via-red-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
-              🎄 С Новым Годом! 🎆
-            </div>
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-4 md:mb-6 fire-glow">
               OUTCAST
             </h1>
