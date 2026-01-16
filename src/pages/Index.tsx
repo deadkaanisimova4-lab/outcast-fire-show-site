@@ -448,6 +448,9 @@ const Index = () => {
                 className="h-12 w-auto object-contain logo-animate cursor-pointer"
                 onClick={() => scrollToSection('home')}
               />
+              <Button onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90">
+                Заказать шоу
+              </Button>
             </div>
             <div className="hidden md:flex gap-6">
               <button onClick={() => scrollToSection('home')} className="hover:text-primary transition-colors">Главная</button>
@@ -470,15 +473,6 @@ const Index = () => {
                   <Icon name="Send" size={20} className="text-blue-400 group-hover:scale-110 transition-transform" />
                 </a>
                 <a 
-                  href="https://wa.me/79518152553" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 hover:bg-green-600/20 rounded-lg transition-colors group"
-                  aria-label="WhatsApp"
-                >
-                  <Icon name="MessageCircle" size={20} className="text-green-400 group-hover:scale-110 transition-transform" />
-                </a>
-                <a 
                   href="https://t.me/+79518152553" 
                   target="_blank"
                   rel="noopener noreferrer"
@@ -488,9 +482,6 @@ const Index = () => {
                   <Icon name="Send" size={20} className="text-sky-400 group-hover:scale-110 transition-transform" />
                 </a>
               </div>
-              <Button onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90">
-                Заказать шоу
-              </Button>
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="md:hidden p-2 hover:bg-primary/20 rounded-lg transition-colors"
