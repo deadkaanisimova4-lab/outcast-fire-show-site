@@ -448,7 +448,7 @@ const Index = () => {
                 className="h-12 w-auto object-contain logo-animate cursor-pointer"
                 onClick={() => scrollToSection('home')}
               />
-              <Button onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/50 animate-smooth-pulse">
+              <Button onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-105 transition-all duration-300 animate-smooth-pulse fire-border">
                 <Icon name="Flame" size={18} className="mr-2" />
                 Заказать шоу
               </Button>
@@ -1343,7 +1343,7 @@ const Index = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
+          className="fixed bottom-6 left-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
           aria-label="Наверх"
         >
           <Icon name="ArrowUp" size={24} />
@@ -1352,7 +1352,7 @@ const Index = () => {
 
       <button
         onClick={toggleSound}
-        className="fixed bottom-6 right-24 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/50 transition-all hover-scale"
+        className="fixed bottom-6 left-24 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/50 transition-all hover-scale"
         aria-label={isSoundPlaying ? "Выключить звук" : "Включить звук"}
       >
         <Icon name={isSoundPlaying ? "Volume2" : "VolumeX"} size={24} />
