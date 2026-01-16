@@ -32,7 +32,7 @@ const Index = () => {
   useEffect(() => {
     const audio = new Audio('https://cdn.pixabay.com/audio/2022/03/10/audio_4a465392de.mp3');
     audio.loop = true;
-    audio.volume = 0.12;
+    audio.volume = 0.25;
     setAudioElement(audio);
 
     const playSound = () => {
@@ -448,7 +448,27 @@ const Index = () => {
                 className="h-12 w-auto object-contain logo-animate cursor-pointer"
                 onClick={() => scrollToSection('home')}
               />
-              <Button onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-105 transition-all duration-300 animate-smooth-pulse fire-border">
+              <Button 
+                onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} 
+                onMouseEnter={(e) => {
+                  const button = e.currentTarget;
+                  for (let i = 0; i < 15; i++) {
+                    setTimeout(() => {
+                      const spark = document.createElement('div');
+                      spark.className = 'button-spark';
+                      const angle = Math.random() * Math.PI * 2;
+                      const distance = 40 + Math.random() * 60;
+                      spark.style.setProperty('--spark-x', `${Math.cos(angle) * distance}px`);
+                      spark.style.setProperty('--spark-y', `${Math.sin(angle) * distance}px`);
+                      spark.style.left = `${button.offsetWidth / 2}px`;
+                      spark.style.top = `${button.offsetHeight / 2}px`;
+                      button.appendChild(spark);
+                      setTimeout(() => spark.remove(), 800);
+                    }, i * 30);
+                  }
+                }}
+                className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-105 transition-all duration-300 animate-smooth-pulse fire-border button-with-sparks relative overflow-visible"
+              >
                 <Icon name="Flame" size={18} className="mr-2" />
                 Заказать шоу
               </Button>
