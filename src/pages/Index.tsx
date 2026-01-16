@@ -448,7 +448,8 @@ const Index = () => {
                 className="h-12 w-auto object-contain logo-animate cursor-pointer"
                 onClick={() => scrollToSection('home')}
               />
-              <Button onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90">
+              <Button onClick={() => window.open('https://vk.com/im?entrypoint=community_page&media=&sel=-203229964', '_blank')} className="hidden md:flex bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/50 animate-pulse">
+                <Icon name="Flame" size={18} className="mr-2" />
                 Заказать шоу
               </Button>
             </div>
