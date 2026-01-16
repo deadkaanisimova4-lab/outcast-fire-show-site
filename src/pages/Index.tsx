@@ -26,6 +26,44 @@ const Index = () => {
     artists: '2',
     distance: '0'
   });
+  const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+  const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = new Audio('https://cdn.pixabay.com/audio/2022/03/10/audio_4a465392de.mp3');
+    audio.loop = true;
+    audio.volume = 0.12;
+    setAudioElement(audio);
+
+    const playSound = () => {
+      audio.play().catch(() => {});
+      setIsSoundPlaying(true);
+      document.removeEventListener('click', playSound);
+      document.removeEventListener('touchstart', playSound);
+    };
+
+    document.addEventListener('click', playSound);
+    document.addEventListener('touchstart', playSound);
+
+    return () => {
+      audio.pause();
+      audio.src = '';
+      document.removeEventListener('click', playSound);
+      document.removeEventListener('touchstart', playSound);
+    };
+  }, []);
+
+  const toggleSound = () => {
+    if (audioElement) {
+      if (isSoundPlaying) {
+        audioElement.pause();
+        setIsSoundPlaying(false);
+      } else {
+        audioElement.play().catch(() => {});
+        setIsSoundPlaying(true);
+      }
+    }
+  };
 
   useEffect(() => {
     const createParticle = () => {
@@ -1331,6 +1369,14 @@ const Index = () => {
           <Icon name="ArrowUp" size={24} />
         </button>
       )}
+
+      <button
+        onClick={toggleSound}
+        className="fixed bottom-6 right-24 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/50 transition-all hover-scale"
+        aria-label={isSoundPlaying ? "Выключить звук" : "Включить звук"}
+      >
+        <Icon name={isSoundPlaying ? "Volume2" : "VolumeX"} size={24} />
+      </button>
 
       <footer className="bg-card border-t border-primary/20 py-6 md:py-8">
         <div className="container mx-auto px-4">
