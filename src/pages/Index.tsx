@@ -9,6 +9,11 @@ import SEOContent from '@/components/SEOContent';
 import ContactFormWidget from '@/components/ContactFormWidget';
 
 import PerformanceMap from '@/components/PerformanceMap';
+import FireDivider from '@/components/FireDivider';
+import AnimatedCounter from '@/components/AnimatedCounter';
+import GalleryLightbox from '@/components/GalleryLightbox';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import WorkTimeline from '@/components/WorkTimeline';
 
 const Index = () => {
   const { toast } = useToast();
@@ -95,6 +100,11 @@ const Index = () => {
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
+
+      const parallaxBgs = document.querySelectorAll('.parallax-bg') as NodeListOf<HTMLElement>;
+      parallaxBgs.forEach(bg => {
+        bg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+      });
 
       const elements = document.querySelectorAll('.scroll-reveal');
       elements.forEach((el) => {
@@ -554,10 +564,10 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black"></div>
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20 parallax-hero">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black parallax-bg"></div>
         <div id="particles-container" className="absolute inset-0 overflow-hidden"></div>
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-30 parallax-bg">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-float"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
@@ -593,6 +603,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <FireDivider variant="flame" />
 
       <section className="py-12 md:py-20 bg-gradient-to-b from-black via-primary/5 to-black scroll-reveal">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -633,48 +645,20 @@ const Index = () => {
         </div>
       </section>
 
+      <FireDivider variant="spark" />
+
       <section className="py-20 bg-gradient-to-b from-black to-card scroll-reveal">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
-            <div className="group p-4 md:p-0">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 md:mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">
-                500+
-              </div>
-              <div className="text-sm sm:text-base md:text-lg text-muted-foreground">
-                <Icon name="Flame" size={20} className="inline mb-1 text-primary" />
-                <br />Зажигательных шоу
-              </div>
-            </div>
-            <div className="group p-4 md:p-0">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 md:mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">
-                7+
-              </div>
-              <div className="text-sm sm:text-base md:text-lg text-muted-foreground">
-                <Icon name="Award" size={20} className="inline mb-1 text-primary" />
-                <br />Лет опыта
-              </div>
-            </div>
-            <div className="group p-4 md:p-0">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 md:mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">
-                1000+
-              </div>
-              <div className="text-sm sm:text-base md:text-lg text-muted-foreground">
-                <Icon name="Heart" size={20} className="inline mb-1 text-primary" />
-                <br />Довольных клиентов
-              </div>
-            </div>
-            <div className="group p-4 md:p-0">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 md:mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">
-                100%
-              </div>
-              <div className="text-sm sm:text-base md:text-lg text-muted-foreground">
-                <Icon name="Shield" size={20} className="inline mb-1 text-primary" />
-                <br />Безопасность
-              </div>
-            </div>
+            <AnimatedCounter target="500+" label="Зажигательных шоу" icon={<Icon name="Flame" size={20} />} />
+            <AnimatedCounter target="7+" label="Лет опыта" icon={<Icon name="Award" size={20} />} duration={1500} />
+            <AnimatedCounter target="1000+" label="Довольных клиентов" icon={<Icon name="Heart" size={20} />} duration={2500} />
+            <AnimatedCounter target="100%" label="Безопасность" icon={<Icon name="Shield" size={20} />} duration={1800} />
           </div>
         </div>
       </section>
+
+      <FireDivider variant="wave" />
 
       <section id="programs" className="py-12 md:py-20 bg-gradient-to-b from-card to-black scroll-reveal">
         <div className="container mx-auto px-4">
@@ -687,7 +671,7 @@ const Index = () => {
             {programs.map((program, index) => (
               <Card 
                 key={index} 
-                className="bg-card border-primary/20 hover:border-primary/50 transition-all hover-scale"
+                className="glass-card card-fire-hover rounded-xl"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
@@ -758,7 +742,7 @@ const Index = () => {
             {installations.map((installation, index) => (
               <Card 
                 key={index} 
-                className="bg-card border-primary/20 hover:border-primary/50 transition-all hover-scale"
+                className="glass-card card-fire-hover rounded-xl"
               >
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4 animate-flicker">
@@ -933,52 +917,7 @@ const Index = () => {
             Моменты наших выступлений
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
-            {gallery.map((image, index) => (
-              <div 
-                key={index}
-                className="group relative aspect-square overflow-hidden rounded-lg border border-primary/20 hover:border-primary/50 transition-all hover-scale"
-              >
-                {image.videoUrl ? (
-                  <a 
-                    href={image.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full h-full relative"
-                  >
-                    <img 
-                      src={image.url} 
-                      alt={`Огненное шоу Челябинск OUTCAST - ${image.title} - файер-шоу с пиротехникой на праздник`}
-                      loading="lazy"
-                      className="w-full h-full object-cover gallery-image transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-                      <div className="w-16 h-16 bg-primary/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Icon name="Play" size={32} className="text-white ml-1" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                      <h3 className="text-xl font-bold">{image.title}</h3>
-                    </div>
-                  </a>
-                ) : (
-                  <>
-                    <img 
-                      src={image.url} 
-                      alt={`Файер-шоу Челябинск - ${image.title} - профессиональное пиротехническое шоу OUTCAST`}
-                      loading="lazy"
-                      className="w-full h-full object-cover gallery-image transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-xl font-bold">{image.title}</h3>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
-          </div>
+          <GalleryLightbox images={gallery} />
         </div>
       </section>
 
@@ -1047,7 +986,7 @@ const Index = () => {
             {stats.map((stat, index) => (
               <div 
                 key={index} 
-                className="text-center p-6 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all hover-scale"
+                className="text-center p-6 rounded-xl glass-card card-fire-hover"
               >
                 <div className="text-4xl md:text-5xl font-black text-primary mb-2 fire-glow">
                   {stat.value}
@@ -1068,74 +1007,7 @@ const Index = () => {
             Живые эмоции от тех, кто уже выбрал OUTCAST 🔥
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card 
-                key={index}
-                className="bg-gradient-to-br from-card via-card to-card/50 border-2 border-primary/20 hover:border-primary/60 transition-all hover-scale overflow-hidden group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
-                {testimonial.photo && (
-                  <div className="relative h-56 overflow-hidden">
-                    <img 
-                      src={testimonial.photo} 
-                      alt={`Отзыв о файер-шоу OUTCAST Челябинск - ${testimonial.event} - ${testimonial.name}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent"></div>
-                    <div className="absolute top-3 right-3 flex gap-1 bg-black/70 px-3 py-1 rounded-full backdrop-blur-sm">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Icon 
-                          key={i} 
-                          name="Star" 
-                          size={14} 
-                          className="text-secondary fill-secondary animate-pulse" 
-                          style={{ animationDelay: `${i * 0.1}s` }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                <CardHeader className="relative pb-3">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle className="text-lg font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text">
-                        {testimonial.name}
-                      </CardTitle>
-                      <CardDescription className="text-xs text-primary/80 font-medium flex items-center gap-1 mt-1">
-                        <Icon name="Flame" size={12} className="animate-flicker" />
-                        {testimonial.event}
-                      </CardDescription>
-                    </div>
-                  </div>
-                </CardHeader>
-                
-                <CardContent className="relative pt-0">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Quote" size={28} className="text-primary/30 flex-shrink-0 -mt-1" />
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {testimonial.text}
-                    </p>
-                  </div>
-                </CardContent>
-                
-                <CardFooter className="pt-4 border-t border-primary/10 relative">
-                  <a 
-                    href="https://vk.com/topic-203229964_47521361"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-primary hover:text-accent transition-colors flex items-center gap-1 font-medium group/link"
-                  >
-                    Еще отзывы в VK
-                    <Icon name="ArrowRight" size={14} className="group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+          <TestimonialsCarousel testimonials={testimonials} />
           
           <div className="text-center mt-12">
             <Button 
@@ -1150,6 +1022,10 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <WorkTimeline />
+
+      <FireDivider variant="spark" />
 
       <section className="py-12 md:py-20 bg-gradient-to-b from-black to-card scroll-reveal">
         <div className="container mx-auto px-4">
@@ -1179,6 +1055,8 @@ const Index = () => {
       </section>
 
       <SEOContent />
+
+      <FireDivider variant="flame" />
 
       <section id="contacts" className="py-12 md:py-20 bg-gradient-to-b from-card to-black scroll-reveal">
         <div className="container mx-auto px-4">
@@ -1325,7 +1203,7 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="bg-card border-primary/20 text-center">
+            <Card className="glass-card card-fire-hover rounded-xl text-center">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon name="Shield" size={32} className="text-primary" />
@@ -1335,7 +1213,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-primary/20 text-center">
+            <Card className="glass-card card-fire-hover rounded-xl text-center">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon name="FileCheck" size={32} className="text-primary" />
@@ -1345,7 +1223,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-primary/20 text-center">
+            <Card className="glass-card card-fire-hover rounded-xl text-center">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon name="Ambulance" size={32} className="text-primary" />
