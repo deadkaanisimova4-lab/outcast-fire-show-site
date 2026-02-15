@@ -608,11 +608,13 @@ const Index = () => {
             <div className="aspect-video bg-black">
               <iframe
                 src="https://vk.com/video_ext.php?oid=-203229964&id=456239833&hash=6d750a5492e6fb9e"
+                title="Видео постановки TRAILER — огненное шоу OUTCAST Fire Show в Челябинске"
                 width="100%"
                 height="100%"
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
                 frameBorder="0"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full"
               ></iframe>
             </div>
