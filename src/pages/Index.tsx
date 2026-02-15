@@ -565,14 +565,10 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="animate-fade-in">
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-4 md:mb-6 fire-glow">
-              OUTCAST
+              <span className="block">OUTCAST</span>
+              <span className="block text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">FIRE SHOW</span>
+              <span className="block text-lg sm:text-xl md:text-2xl text-muted-foreground font-normal mb-3 md:mb-4 max-w-2xl mx-auto px-4">Огненное шоу в Челябинске</span>
             </h1>
-            <p className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              FIRE SHOW
-            </p>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-3 md:mb-4 max-w-2xl mx-auto px-4">
-              Огненное шоу для вашего праздника
-            </p>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground/80 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
               Профессиональное файер-шоу на свадьбу, корпоратив, день рождения и любое торжество
             </p>
@@ -788,7 +784,7 @@ const Index = () => {
                     )}
                     {installation.videoUrls && (
                       <div className="space-y-2">
-                        {installation.videoUrls.map((video: any, vidIdx: number) => (
+                        {installation.videoUrls.map((video: { url: string; title: string }, vidIdx: number) => (
                           <a 
                             key={vidIdx}
                             href={video.url}
@@ -1209,7 +1205,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Телефон</h4>
-                  <a href="tel:+89085740813" className="text-muted-foreground hover:text-primary transition-colors">+7 (908) 574-08-13</a>
+                  <a href="tel:+79085740813" className="text-muted-foreground hover:text-primary transition-colors">+7 (908) 574-08-13</a>
                 </div>
               </div>
 
