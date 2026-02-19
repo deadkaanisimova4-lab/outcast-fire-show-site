@@ -43,6 +43,30 @@ const BlogContent = () => {
       image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
       date: '25 ноября 2024',
       readTime: '8 минут'
+    },
+    {
+      id: 'ognennoe-shou-na-korporativ',
+      title: 'Огненное шоу на корпоратив: как удивить коллег',
+      description: 'Как организовать файер-шоу на корпоративе: форматы, тайминг, площадки, бюджет и 5 частых ошибок при заказе.',
+      image: 'https://cdn.poehali.dev/files/d524fd97-2aa3-484d-ae46-9fa3748e5790.jpg',
+      date: '15 февраля 2026',
+      readTime: '8 минут'
+    },
+    {
+      id: 'bezopasnost-ognennogo-shou',
+      title: 'Безопасность огненного шоу: как мы защищаем зрителей',
+      description: 'Всё о безопасности файер-шоу: подготовка артистов, сертифицированный реквизит, чек-лист площадки и как отличить профессионалов.',
+      image: 'https://cdn.poehali.dev/files/282a58c5-553c-4af6-b6e2-c9bf922c59c0.jpg',
+      date: '10 февраля 2026',
+      readTime: '6 минут'
+    },
+    {
+      id: 'ognennoe-shou-na-den-rozhdeniya',
+      title: 'Огненное шоу на день рождения: как удивить именинника',
+      description: 'Файер-шоу на день рождения и юбилей: идеи для сюрприза, форматы для любого возраста, цены и реальные истории.',
+      image: 'https://cdn.poehali.dev/files/5e28f939-32a0-48c9-bc22-4e027c463c35.jpg',
+      date: '18 февраля 2026',
+      readTime: '7 минут'
     }
   ];
 
