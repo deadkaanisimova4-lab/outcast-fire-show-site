@@ -238,6 +238,24 @@ const BlogArticle5 = () => {
                 </Link>
               </div>
             </div>
+
+            <div className="mt-16 pt-8 border-t border-gray-800">
+              <h2 className="text-2xl font-bold text-white mb-6">Читайте также</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <Link to="/blog/chto-takoe-faier-shou-vidy-i-stili" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Что такое файер-шоу: виды и стили</h3>
+                  <p className="text-gray-400 text-sm">Все виды реквизита и стили выступлений — полный гид</p>
+                </Link>
+                <Link to="/blog/ognennoe-shou-na-korporativ" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Огненное шоу на корпоратив</h3>
+                  <p className="text-gray-400 text-sm">Форматы, тайминг и типичные ошибки при заказе</p>
+                </Link>
+                <Link to="/blog/kak-vybrat-ognennoe-shou-dlya-svadby" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Как выбрать огненное шоу для свадьбы</h3>
+                  <p className="text-gray-400 text-sm">Полный гид по выбору программы — форматы, цены, стили</p>
+                </Link>
+              </div>
+            </div>
           </article>
         </main>
 

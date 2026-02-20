@@ -237,6 +237,24 @@ const BlogArticle6 = () => {
                 </Link>
               </div>
             </div>
+
+            <div className="mt-16 pt-8 border-t border-gray-800">
+              <h2 className="text-2xl font-bold text-white mb-6">Читайте также</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <Link to="/blog/kak-vybrat-ognennoe-shou-dlya-svadby" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Как выбрать огненное шоу для свадьбы</h3>
+                  <p className="text-gray-400 text-sm">Полный гид по выбору программы — форматы, цены, стили</p>
+                </Link>
+                <Link to="/blog/ognennoe-shou-na-korporativ" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Огненное шоу на корпоратив</h3>
+                  <p className="text-gray-400 text-sm">Форматы, тайминг и типичные ошибки при заказе</p>
+                </Link>
+                <Link to="/blog/bezopasnost-ognennogo-shou" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Безопасность огненного шоу</h3>
+                  <p className="text-gray-400 text-sm">Как профессионалы защищают зрителей на каждом выступлении</p>
+                </Link>
+              </div>
+            </div>
           </article>
         </main>
 

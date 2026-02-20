@@ -378,6 +378,24 @@ const BlogArticle1 = () => {
               </div>
             </div>
           </div>
+
+            <div className="mt-16 pt-8 border-t border-gray-800">
+              <h2 className="text-2xl font-bold text-white mb-6">Читайте также</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <Link to="/blog/chto-takoe-faier-shou-vidy-i-stili" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Что такое файер-шоу: виды и стили</h3>
+                  <p className="text-gray-400 text-sm">Все виды реквизита и стили выступлений — полный гид</p>
+                </Link>
+                <Link to="/blog/bezopasnost-ognennogo-shou" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Безопасность огненного шоу</h3>
+                  <p className="text-gray-400 text-sm">Как профессионалы защищают зрителей на каждом выступлении</p>
+                </Link>
+                <Link to="/blog/top-5-ploshchadok-v-chelyabinske-dlya-faier-shou" className="bg-gray-900/60 border border-gray-700 hover:border-primary/50 rounded-lg p-5 transition-all group">
+                  <h3 className="text-primary font-semibold mb-2 group-hover:text-primary/80">Топ-5 площадок в Челябинске</h3>
+                  <p className="text-gray-400 text-sm">Лучшие места для огненного шоу в Челябинске</p>
+                </Link>
+              </div>
+            </div>
         </article>
       </main>
 
