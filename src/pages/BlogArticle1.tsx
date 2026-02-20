@@ -12,6 +12,8 @@ const BlogArticle1 = () => {
         keywords="огненное шоу на свадьбу, файер-шоу цена челябинск, заказать огненное шоу на свадьбу, как выбрать файер-шоу, свадебное огненное шоу челябинск, выступление с огнем на свадьбу"
         url="https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/kak-vybrat-ognennoe-shou-dlya-svadby"
         image="https://cdn.poehali.dev/files/d524fd97-2aa3-484d-ae46-9fa3748e5790.jpg"
+        datePublished="2024-11-25"
+        dateModified="2026-02-20"
       />
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">

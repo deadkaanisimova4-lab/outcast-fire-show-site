@@ -12,6 +12,8 @@ const BlogArticle5 = () => {
         keywords="безопасность огненного шоу, файер-шоу безопасно, пожарная безопасность огненное шоу, страховка артистов огненного шоу, безопасное огненное шоу челябинск"
         url="https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/bezopasnost-ognennogo-shou"
         image="https://cdn.poehali.dev/files/282a58c5-553c-4af6-b6e2-c9bf922c59c0.jpg"
+        datePublished="2026-02-10"
+        dateModified="2026-02-20"
       />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
         <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">

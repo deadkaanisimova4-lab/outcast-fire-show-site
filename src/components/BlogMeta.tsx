@@ -6,9 +6,11 @@ interface BlogMetaProps {
   keywords: string;
   url: string;
   image?: string;
+  datePublished?: string;
+  dateModified?: string;
 }
 
-const BlogMeta = ({ title, description, keywords, url, image }: BlogMetaProps) => {
+const BlogMeta = ({ title, description, keywords, url, image, datePublished, dateModified }: BlogMetaProps) => {
   useEffect(() => {
     document.title = title;
     
@@ -49,7 +51,59 @@ const BlogMeta = ({ title, description, keywords, url, image }: BlogMetaProps) =
       link.setAttribute('href', url);
       document.head.appendChild(link);
     }
-  }, [title, description, keywords, url, image]);
+
+    const imgUrl = image || 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg';
+    const published = datePublished || '2024-11-25';
+    const modified = dateModified || datePublished || '2024-11-25';
+
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description,
+      image: imgUrl,
+      url,
+      datePublished: published,
+      dateModified: modified,
+      author: {
+        '@type': 'Organization',
+        name: 'OUTCAST Fire Show',
+        url: 'https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/',
+        telephone: '+79085740813',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Челябинск',
+          addressCountry: 'RU'
+        }
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'OUTCAST Fire Show',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg'
+        }
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url
+      }
+    };
+
+    const existingScript = document.querySelector('script[data-blog-jsonld]');
+    if (existingScript) existingScript.remove();
+
+    const script = document.createElement('script');
+    script.setAttribute('type', 'application/ld+json');
+    script.setAttribute('data-blog-jsonld', 'true');
+    script.textContent = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+
+    return () => {
+      const s = document.querySelector('script[data-blog-jsonld]');
+      if (s) s.remove();
+    };
+  }, [title, description, keywords, url, image, datePublished, dateModified]);
 
   return null;
 };

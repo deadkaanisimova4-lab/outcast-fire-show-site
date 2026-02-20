@@ -15,6 +15,8 @@ const BlogArticle2 = () => {
         description="Лучшие места для огненного шоу в Челябинске: загородные комплексы, рестораны, открытые площадки. Полная информация, адреса, цены, критерии выбора."
         keywords="площадки для огненного шоу челябинск, где провести файер-шоу, загородные комплексы челябинск, рестораны челябинск огненное шоу, площадки для файер-шоу"
         url="https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/top-5-ploshchadok-v-chelyabinske-dlya-faier-shou"
+        datePublished="2024-11-25"
+        dateModified="2026-02-20"
         image="https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg"
       />
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
