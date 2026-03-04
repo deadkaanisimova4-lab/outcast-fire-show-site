@@ -86,14 +86,14 @@ const BlogArticle1 = () => {
                   <Icon name="Flame" size={20} className="text-primary mt-1 flex-shrink-0" />
                   <div>
                     <strong className="text-white">Камерная свадьба (до 50 гостей):</strong>
-                    <p className="text-gray-400 mt-1">Подойдёт парное выступление на 6-8 минут. Это создаст уютную атмосферу и не "перегрузит" программу.</p>
+                    <p className="text-gray-400 mt-1">Подойдёт парное выступление на 6-8 минут. Это создаст уютную атмосферу и не "перегрузит" программу. Но не заставляйте себя ограничиваться.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Icon name="Flame" size={20} className="text-primary mt-1 flex-shrink-0" />
                   <div>
                     <strong className="text-white">Средняя свадьба (50-100 гостей):</strong>
-                    <p className="text-gray-400 mt-1">Идеально подойдёт шоу на 10-15 минут с 2-3 артистами. Можно добавить пиротехнику и огненные спецэффекты.</p>
+                    <p className="text-gray-400 mt-1">Идеально подойдёт шоу на 10-15 минут с 2-3 артистами. Сложными трюками и огненным финалом.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -154,11 +154,11 @@ const BlogArticle1 = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span><strong>Минимальная площадь:</strong> 4×4 метра для одного артиста</span>
+                      <span><strong>Минимальная площадь:</strong> 4×4 метра</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span><strong>Высота потолков:</strong> не менее 4 метров (для закрытых помещений)</span>
+                      <span><strong>Высота потолков:</strong> не менее 4 метров для открытых навесов</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
@@ -194,19 +194,19 @@ const BlogArticle1 = () => {
                 </thead>
                 <tbody className="text-gray-300">
                   <tr className="border-b border-gray-800">
-                    <td className="p-4">MYSTIC (базовая)</td>
+                    <td className="p-4">Постановка «MYSTIC»</td>
                     <td className="p-4">6-8 минут</td>
                     <td className="p-4">2 человека</td>
                     <td className="p-4 text-primary font-bold">18 000₽</td>
                   </tr>
                   <tr className="border-b border-gray-800">
-                    <td className="p-4">TRAILER (средняя)</td>
+                    <td className="p-4">Постановка «TRAILER»</td>
                     <td className="p-4">10-12 минут</td>
-                    <td className="p-4">2-3 человека</td>
+                    <td className="p-4">3-4 человека</td>
                     <td className="p-4 text-primary font-bold">30 000₽</td>
                   </tr>
                   <tr>
-                    <td className="p-4">SHAMANISM (премиум)</td>
+                    <td className="p-4">Постановка «SHAMANISM»</td>
                     <td className="p-4">15-18 минут</td>
                     <td className="p-4">3-4 человека</td>
                     <td className="p-4 text-primary font-bold">32 000₽</td>
@@ -229,11 +229,7 @@ const BlogArticle1 = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="Check" size={20} className="text-primary mt-1 flex-shrink-0" />
-                <span>Световое шоу — от 8000₽</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Icon name="Check" size={20} className="text-primary mt-1 flex-shrink-0" />
-                <span>Фотозона с огнём — от 5000₽</span>
+                <span>Фотозона с огнём — от 7000₽</span>
               </li>
             </ul>
 

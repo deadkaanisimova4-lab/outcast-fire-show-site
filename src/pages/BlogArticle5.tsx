@@ -112,11 +112,11 @@ const BlogArticle5 = () => {
                 <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-green-500/30 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-green-400 mb-3">Топливо</h3>
                   <p className="text-gray-300">
-                    Используем только специальный парафин с контролируемой температурой горения. Никакого бензина или спирта — они дают непредсказуемое пламя и опасные испарения.
+                    Используем только специальный состав с контролируемой температурой горения. Никакого бензина или спирта — они дают непредсказуемое пламя и опасные испарения.
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-green-500/30 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-green-400 mb-3">Фитили и пои</h3>
+                  <h3 className="text-xl font-bold text-green-400 mb-3">Реквизит</h3>
                   <p className="text-gray-300">
                     Сертифицированный кевларовый материал. Не разбрасывает искры, горит ровно и предсказуемо. Каждый элемент проверяется перед выступлением.
                   </p>
@@ -127,12 +127,7 @@ const BlogArticle5 = () => {
                     Холодные фонтаны и бенгальские огни сертифицированы для использования в помещениях. Температура искр не превышает 60°C — не поджигают одежду.
                   </p>
                 </div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-green-500/30 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-green-400 mb-3">Костюмы</h3>
-                  <p className="text-gray-300">
-                    Огнестойкая ткань, обработанная специальным составом. Даже при случайном контакте с пламенем костюм не загорится.
-                  </p>
-                </div>
+
               </div>
 
               <h2 className="text-3xl font-bold text-primary mb-4 mt-12">Меры безопасности на площадке</h2>

@@ -32,17 +32,7 @@ const AdditionalConsiderations = () => {
             Акустика и звук
           </h3>
           <p className="text-gray-300">
-            Огненное шоу идёт под музыку. Убедитесь, что на площадке есть хорошая звуковая система.
-          </p>
-        </div>
-
-        <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-4">
-          <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-            <Icon name="Camera" size={20} className="text-primary" />
-            Освещение для фото
-          </h3>
-          <p className="text-gray-300">
-            Проверьте, есть ли дополнительная подсветка. Это важно для красивых фото и видео.
+            Огненное шоу идёт под музыку. Убедитесь, что на площадке есть доступ к сети.
           </p>
         </div>
       </div>

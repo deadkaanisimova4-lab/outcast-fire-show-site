@@ -6,7 +6,7 @@ import random
 import datetime
 
 def handler(event: dict, context) -> dict:
-    """Отправляет заявку с сайта в беседу группы ВКонтакте."""
+    """Отправляет заявку с сайта в ВКонтакте через API сообщества."""
     
     if event.get('httpMethod') == 'OPTIONS':
         return {
@@ -29,11 +29,30 @@ def handler(event: dict, context) -> dict:
         return {
             'statusCode': 400,
             'headers': {'Access-Control-Allow-Origin': '*'},
-            'body': json.dumps({'error': 'Имя и телефон обязательны'})
+            'body': json.dumps({'error': 'Имя и телефон обязательны'}, ensure_ascii=False)
         }
 
     vk_token = os.environ.get('VK_BOT_TOKEN', '')
-    peer_id = -203229964
+    if not vk_token:
+        return {
+            'statusCode': 500,
+            'headers': {'Access-Control-Allow-Origin': '*'},
+            'body': json.dumps({'error': 'VK_BOT_TOKEN не настроен'})
+        }
+
+    # Получаем admin user id из переменной окружения (опционально)
+    admin_user_id = os.environ.get('VK_ADMIN_USER_ID', '')
+    
+    # peer_id: если задан admin_user_id — шлём пользователю,
+    # иначе пробуем отправить в беседу группы (peer_id = 2000000000 + chat_id)
+    # По умолчанию chat_id=1 (первая беседа сообщества)
+    if admin_user_id:
+        peer_id = int(admin_user_id)
+    else:
+        # Беседа сообщества: 2000000000 + chat_id
+        # chat_id берём из переменной окружения, по умолчанию 1
+        chat_id = int(os.environ.get('VK_CHAT_ID', '1'))
+        peer_id = 2000000000 + chat_id
 
     text = (
         f"🔥 Новая заявка с сайта!\n\n"
@@ -59,14 +78,16 @@ def handler(event: dict, context) -> dict:
         result = json.loads(resp.read().decode())
 
     if 'error' in result:
+        error_msg = result['error'].get('error_msg', 'Ошибка VK API')
+        error_code = result['error'].get('error_code', 0)
         return {
             'statusCode': 500,
             'headers': {'Access-Control-Allow-Origin': '*'},
-            'body': json.dumps({'error': result['error'].get('error_msg', 'Ошибка VK API')})
+            'body': json.dumps({'error': error_msg, 'code': error_code})
         }
 
     return {
         'statusCode': 200,
         'headers': {'Access-Control-Allow-Origin': '*'},
-        'body': json.dumps({'success': True})
+        'body': json.dumps({'success': True, 'message_id': result.get('response')})
     }

@@ -74,35 +74,8 @@ const BlogArticle6 = () => {
 
               <h2 className="text-3xl font-bold text-primary mb-4 mt-12">Для кого подходит</h2>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Огненное шоу — универсальный формат. Мы выступали на днях рождения людей от 5 до 70 лет:
+                Огненное шоу — универсальный формат для любого возраста и повода. Мы подбираем программу под каждого именинника: от самых маленьких до солидных юбилеев. Возраст — не ограничение, от 1 года и до бесконечности.
               </p>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-primary/30 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">🎈 Детский праздник (5-12 лет)</h3>
-                  <p className="text-gray-300">
-                    Лёгкая программа с яркими эффектами и интерактивом: дети могут попробовать жонглировать светящимися шарами. Безопасно и весело.
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-primary/30 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">🎂 18-30 лет</h3>
-                  <p className="text-gray-300">
-                    Энергичное шоу под драйвовую музыку. Сложные трюки, огненные вихри, пиротехника. Идеально для вечеринок в стиле «вау».
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-primary/30 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">🥂 Юбилей (30-50 лет)</h3>
-                  <p className="text-gray-300">
-                    Элегантная программа с красивой хореографией. Можно добавить огненную надпись с именем и возрастом — отличный момент для фото.
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-primary/30 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">👑 Солидный юбилей (50+ лет)</h3>
-                  <p className="text-gray-300">
-                    Спокойное, завораживающее шоу. Плавные движения, глубокая музыка, тёплая атмосфера. Огненные сердца и фонтаны как финальный штрих торжества.
-                  </p>
-                </div>
-              </div>
 
               <h2 className="text-3xl font-bold text-primary mb-4 mt-12">Идеи для сюрприза</h2>
               <p className="text-gray-300 leading-relaxed mb-6">

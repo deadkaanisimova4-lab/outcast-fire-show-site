@@ -32,7 +32,7 @@ const BlogContent = () => {
       id: 'top-5-ploshchadok-v-chelyabinske-dlya-faier-shou',
       title: 'Топ-5 площадок в Челябинске для файер-шоу',
       description: 'Лучшие локации для огненного шоу в Челябинске: рестораны, загородные комплексы и открытые площадки. С ценами и контактами.',
-      image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
+      image: 'https://cdn.poehali.dev/files/f96a2f13-fff3-4d64-8cb3-5ad8fd87d693.jpg',
       date: '25 ноября 2024',
       readTime: '6 минут'
     },
@@ -40,7 +40,7 @@ const BlogContent = () => {
       id: 'chto-takoe-faier-shou-vidy-i-stili',
       title: 'Что такое файер-шоу: виды и стили',
       description: 'Всё, что нужно знать о файер-шоу: история, виды реквизита, стили выступлений и современные тренды в огненных постановках.',
-      image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
+      image: 'https://cdn.poehali.dev/files/f3175266-0801-4d7b-9dd0-690e757ef3ad.jpg',
       date: '25 ноября 2024',
       readTime: '8 минут'
     },

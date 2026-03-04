@@ -158,10 +158,7 @@ const BlogArticle4 = () => {
                         <span className="text-primary mt-1">•</span>
                         <span><strong>Для летнего:</strong> с наступлением темноты (21:00-22:00) — огонь смотрится максимально эффектно</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1">•</span>
-                        <span><strong>Не ставьте:</strong> в самом начале (гости ещё не в настроении) или в финале (многие уже уехали)</span>
-                      </li>
+
                     </ul>
                   </div>
                 </div>
@@ -180,7 +177,7 @@ const BlogArticle4 = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span><strong>В помещении:</strong> высота потолков от 4 метров, негорючее покрытие пола, вентиляция. Мы используем специальный реквизит с минимальным дымом</span>
+                    <span><strong>В помещении:</strong> работаем только на открытом воздухе или на открытых террасах</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>

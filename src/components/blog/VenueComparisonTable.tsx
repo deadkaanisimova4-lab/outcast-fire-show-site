@@ -23,23 +23,23 @@ const VenueComparisonTable = () => {
               <td className="p-3">⭐⭐⭐⭐⭐</td>
             </tr>
             <tr className="border-b border-gray-800">
-              <td className="p-3">Усадьба (Сугояк)</td>
+              <td className="p-3">Усадьба (пос. Слава)</td>
               <td className="p-3">Загородная</td>
               <td className="p-3">до 180</td>
               <td className="p-3">от 55 000₽</td>
               <td className="p-3">⭐⭐⭐⭐⭐</td>
             </tr>
             <tr className="border-b border-gray-800">
-              <td className="p-3">Парк-отель Урал</td>
-              <td className="p-3">Загородная</td>
-              <td className="p-3">до 300</td>
-              <td className="p-3">от 70 000₽</td>
+              <td className="p-3">Алые паруса</td>
+              <td className="p-3">Банкетный зал</td>
+              <td className="p-3">до 120</td>
+              <td className="p-3">от 1 600₽/чел</td>
               <td className="p-3">⭐⭐⭐⭐⭐</td>
             </tr>
             <tr className="border-b border-gray-800">
-              <td className="p-3">Зюраткуль</td>
-              <td className="p-3">База отдыха</td>
-              <td className="p-3">до 100</td>
+              <td className="p-3">Еловое</td>
+              <td className="p-3">Парк-отель</td>
+              <td className="p-3">до 500</td>
               <td className="p-3">от 35 000₽</td>
               <td className="p-3">⭐⭐⭐⭐⭐</td>
             </tr>
