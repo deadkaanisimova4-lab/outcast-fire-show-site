@@ -35,7 +35,7 @@ const Index = () => {
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio('https://cdn.pixabay.com/audio/2022/03/10/audio_4a465392de.mp3');
+    const audio = new Audio('https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1e/Campfire.ogg/Campfire.ogg.mp3');
     audio.loop = true;
     audio.volume = 0.25;
     setAudioElement(audio);
@@ -125,13 +125,23 @@ const Index = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в ближайшее время",
-    });
-    setFormData({ name: '', phone: '', message: '' });
+    try {
+      const res = await fetch('https://functions.poehali.dev/1aabf2b3-fa5a-476e-8477-ba4609a5cacb', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if (res.ok) {
+        toast({ title: "Заявка отправлена!", description: "Мы свяжемся с вами в ближайшее время" });
+        setFormData({ name: '', phone: '', message: '' });
+      } else {
+        throw new Error('error');
+      }
+    } catch {
+      toast({ title: "Ошибка отправки", description: "Позвоните нам: +7 (908) 574-08-13", variant: "destructive" });
+    }
   };
 
   const scrollToSection = (id: string) => {
@@ -501,7 +511,9 @@ const Index = () => {
                   className="p-2 hover:bg-blue-600/20 rounded-lg transition-colors group"
                   aria-label="VK"
                 >
-                  <Icon name="Send" size={20} className="text-blue-400 group-hover:scale-110 transition-transform" />
+                  <svg className="text-blue-400 group-hover:scale-110 transition-transform w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.15 14.77c-.41.55-1.17.74-1.77.74-1.21 0-1.67-.47-2.67-1.47-.81-.81-1.18-1.18-1.86-1.18-.77 0-.89.11-1.15.51-.23.35-.38.95-.38 1.51 0 .34-.28.62-.75.62h-.98c-.78 0-3.23-.17-5.29-2.3C1.28 12.99.62 10.12.56 10c-.11-.31.07-.47.36-.47h2.03c.31 0 .42.16.54.39.12.24 1.27 3.02 1.97 3.74.13.14.22.18.31.18.11 0 .16-.06.22-.19V11.3c-.06-.93-.55-1.01-.55-1.33 0-.24.2-.49.53-.49h3.18c.26 0 .36.14.36.44v3.49c0 .26.12.36.19.36.11 0 .22-.1.41-.29 1.58-1.78 2.72-4.53 2.72-4.53.07-.14.2-.28.47-.28h2.03c.37 0 .45.19.37.44-.14.51-1.79 3.77-1.79 3.77-.1.18-.13.26 0 .47.09.14.37.36.56.57.76.76 1.35 1.39 1.5 1.82.16.43-.08.65-.46.65h-2.03z"/>
+                  </svg>
                 </a>
                 <a 
                   href="https://t.me/+79518152553" 
@@ -1091,16 +1103,6 @@ const Index = () => {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Mail" size={20} className="text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-muted-foreground">info@outcast-show.ru</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Icon name="Clock" size={20} className="text-primary" />
                 </div>
                 <div>
@@ -1124,22 +1126,15 @@ const Index = () => {
                     </svg>
                   </a>
                   <a 
-                    href="https://instagram.com/outcast_fireshow" 
+                    href="https://t.me/ognennoeshow74" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary/30 transition-all hover-scale"
-                    aria-label="Instagram"
+                    aria-label="Telegram"
                   >
-                    <Icon name="Instagram" size={24} className="text-primary" />
-                  </a>
-                  <a 
-                    href="https://wa.me/79085740813" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary/30 transition-all hover-scale"
-                    aria-label="WhatsApp"
-                  >
-                    <Icon name="MessageCircle" size={24} className="text-primary" />
+                    <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8-1.68 7.92c-.12.56-.48.7-.96.44l-2.64-1.96-1.28 1.24c-.14.14-.26.26-.52.26l.18-2.68 4.72-4.28c.2-.18-.04-.28-.32-.1L7.6 14.4l-2.56-.8c-.56-.16-.56-.56.12-.84l10.08-3.88c.44-.16.84.1.7.84l-.3-.92z"/>
+                    </svg>
                   </a>
                 </div>
               </div>

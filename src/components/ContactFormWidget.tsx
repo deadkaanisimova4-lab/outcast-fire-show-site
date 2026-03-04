@@ -6,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
+const VK_NOTIFY_URL = 'https://functions.poehali.dev/1aabf2b3-fa5a-476e-8477-ba4609a5cacb';
+
 const ContactFormWidget = () => {
   const { toast } = useToast();
   const [isOpen, setIsOpen] = useState(false);
@@ -30,29 +32,32 @@ const ContactFormWidget = () => {
 
     setIsSubmitting(true);
 
-    const whatsappNumber = '89085740813';
-    const text = `🔥 *Новая заявка с сайта!*
+    try {
+      const res = await fetch(VK_NOTIFY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
 
-👤 *Имя:* ${formData.name}
-📞 *Телефон:* ${formData.phone}
-💬 *Сообщение:* ${formData.message || 'Не указано'}
-
----
-⏰ Время: ${new Date().toLocaleString('ru-RU')}`;
-
-    const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-
-    window.open(whatsappUrl, '_blank');
-
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в ближайшее время",
-    });
-
-    setFormData({ name: '', phone: '', message: '' });
-    setIsSubmitting(false);
-    setIsOpen(false);
+      if (res.ok) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в ближайшее время",
+        });
+        setFormData({ name: '', phone: '', message: '' });
+        setIsOpen(false);
+      } else {
+        throw new Error('error');
+      }
+    } catch {
+      toast({
+        title: "Ошибка отправки",
+        description: "Позвоните нам: +7 (908) 574-08-13",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isOpen) {
@@ -60,9 +65,9 @@ const ContactFormWidget = () => {
       <div className="fixed bottom-6 right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-500">
         <Button
           onClick={() => setIsOpen(true)}
-          className="h-16 px-6 rounded-full shadow-2xl bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 hover:scale-110 transition-all duration-300 flex items-center gap-3"
+          className="h-16 px-6 rounded-full shadow-2xl bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-110 transition-all duration-300 flex items-center gap-3"
         >
-          <Icon name="MessageCircle" size={24} className="animate-pulse" />
+          <Icon name="Flame" size={24} className="animate-pulse" />
           <span className="font-bold text-base">Заказать шоу</span>
         </Button>
         <div className="absolute -top-2 -right-2 h-7 w-7 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg">
@@ -74,11 +79,11 @@ const ContactFormWidget = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300">
-      <Card className="w-96 bg-card/95 backdrop-blur-lg border-2 border-green-500/30 shadow-2xl">
+      <Card className="w-96 bg-card/95 backdrop-blur-lg border-2 border-primary/30 shadow-2xl">
         <CardContent className="p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <Icon name="MessageCircle" className="text-green-500" size={24} />
+              <Icon name="Flame" className="text-primary" size={24} />
               <h3 className="font-bold text-lg">Быстрая заявка</h3>
             </div>
             <button
@@ -90,7 +95,7 @@ const ContactFormWidget = () => {
           </div>
 
           <p className="text-sm text-muted-foreground mb-4">
-            Оставьте контакты — мы свяжемся с вами через WhatsApp за 5 минут! 🔥
+            Оставьте контакты — мы свяжемся с вами в течение 5 минут! 🔥
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -100,7 +105,7 @@ const ContactFormWidget = () => {
                 placeholder="Ваше имя *"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="border-green-500/30 focus:border-green-500"
+                className="border-primary/30 focus:border-primary"
                 required
               />
             </div>
@@ -111,7 +116,7 @@ const ContactFormWidget = () => {
                 placeholder="Ваш телефон *"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="border-green-500/30 focus:border-green-500"
+                className="border-primary/30 focus:border-primary"
                 required
               />
             </div>
@@ -121,7 +126,7 @@ const ContactFormWidget = () => {
                 placeholder="Комментарий к заказу (опционально)"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="border-green-500/30 focus:border-green-500 min-h-[80px]"
+                className="border-primary/30 focus:border-primary min-h-[80px]"
                 rows={3}
               />
             </div>
@@ -129,7 +134,7 @@ const ContactFormWidget = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-6 text-base"
+              className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-bold py-6 text-base"
             >
               {isSubmitting ? (
                 <>
@@ -139,7 +144,7 @@ const ContactFormWidget = () => {
               ) : (
                 <>
                   <Icon name="Send" className="mr-2 h-5 w-5" />
-                  Отправить в WhatsApp
+                  Отправить заявку
                 </>
               )}
             </Button>
@@ -147,7 +152,7 @@ const ContactFormWidget = () => {
 
           <div className="mt-4 pt-4 border-t border-border">
             <p className="text-xs text-center text-muted-foreground">
-              📞 Или звоните: <a href="tel:+79085740813" className="text-green-500 font-semibold hover:underline">+7 (908) 574-08-13</a>
+              📞 Или звоните: <a href="tel:+79085740813" className="text-primary font-semibold hover:underline">+7 (908) 574-08-13</a>
             </p>
           </div>
         </CardContent>
