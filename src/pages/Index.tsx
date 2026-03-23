@@ -185,7 +185,7 @@ const Index = () => {
       description: "Максимально современный, энергичный номер. Это взрыв спецэффектов в танце с огнем и пиротехникой. Современная хореография, популярная музыка - этот номер сформирован так, чтобы зритель получил WOW эффект",
       duration: "10 минут",
       price: "от 30 000 ₽",
-      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/d4b758b0-6859-4107-bffe-6570f1c5b392.jpg",
+      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/d866b78c-8f3d-44e1-9141-ffff953489c1.jpg",
       videoUrl: "https://vk.com/wall-203229964_930",
       features: [
         "3-4 артиста на площадке",
@@ -223,7 +223,7 @@ const Index = () => {
       description: "Грандиозное огненное представление с максимальным количеством реквизита и спецэффектов",
       duration: "15 минут",
       price: "от 45 000 ₽",
-      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/3c0ab2c8-2645-4122-a859-3dce25002f74.jpg",
+      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/e10f8f2c-c80b-4853-b21f-35eb31ed4e9b.jpg",
       videoUrl: "https://vk.com/wall-203229964_836",
       features: [
         "8 видов огненного реквизита",
