@@ -156,17 +156,16 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
 
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
-          onClick={handleOverlayClick}
+          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center cursor-zoom-out"
+          onClick={closeLightbox}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Кнопка закрытия — большая, в углу, поверх всего */}
+          {/* Кнопка закрытия */}
           <button
             onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
-            className="absolute top-4 right-4 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 active:bg-white/50 rounded-full flex items-center justify-center transition-colors touch-manipulation"
-            style={{ minWidth: 48, minHeight: 48 }}
+            className="absolute top-4 right-4 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
           >
             <Icon name="X" size={24} className="text-white" />
           </button>
@@ -174,8 +173,7 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
           {/* Стрелка влево */}
           <button
             onClick={(e) => { e.stopPropagation(); goPrev(); }}
-            className="absolute left-2 md:left-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 active:bg-white/50 rounded-full flex items-center justify-center transition-colors touch-manipulation"
-            style={{ minWidth: 48, minHeight: 48 }}
+            className="absolute left-2 md:left-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
           >
             <Icon name="ChevronLeft" size={28} className="text-white" />
           </button>
@@ -183,21 +181,20 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
           {/* Стрелка вправо */}
           <button
             onClick={(e) => { e.stopPropagation(); goNext(); }}
-            className="absolute right-2 md:right-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 active:bg-white/50 rounded-full flex items-center justify-center transition-colors touch-manipulation"
-            style={{ minWidth: 48, minHeight: 48 }}
+            className="absolute right-2 md:right-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
           >
             <Icon name="ChevronRight" size={28} className="text-white" />
           </button>
 
-          {/* Картинка — не перехватывает клик для закрытия */}
+          {/* Картинка — клик по картинке НЕ закрывает */}
           <div
-            className="flex flex-col items-center justify-center w-full h-full px-16 md:px-24 py-16"
+            className="flex flex-col items-center justify-center max-w-5xl w-auto px-16 md:px-24 cursor-default"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={images[lightboxIndex].url}
               alt={images[lightboxIndex].title}
-              className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl select-none"
+              className="max-w-full max-h-[75vh] w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
               draggable={false}
             />
             <div className="text-center mt-4 px-4">
@@ -207,11 +204,6 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
               </p>
             </div>
           </div>
-
-          {/* Подсказка закрытия снизу на мобилке */}
-          <p className="absolute bottom-4 left-0 right-0 text-center text-gray-500 text-xs md:hidden pointer-events-none">
-            Нажми вне фото чтобы закрыть
-          </p>
         </div>
       )}
     </>
