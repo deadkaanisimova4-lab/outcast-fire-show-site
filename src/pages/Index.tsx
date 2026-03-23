@@ -35,7 +35,7 @@ const Index = () => {
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio('https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1e/Campfire.ogg/Campfire.ogg.mp3');
+    const audio = new Audio('https://www.soundjay.com/nature/sounds/campfire-1.mp3');
     audio.loop = true;
     audio.volume = 0.25;
     setAudioElement(audio);
