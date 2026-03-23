@@ -15,6 +15,9 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
+  const isDragging = useRef(false);
+
+  const photoImages = images.filter(i => !i.videoUrl);
 
   const openLightbox = (index: number) => {
     if (!images[index].videoUrl) {
@@ -65,6 +68,14 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
+    isDragging.current = false;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
+    const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
+    if (dx > 10 || dy > 10) isDragging.current = true;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
@@ -78,6 +89,14 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
     touchStartX.current = null;
     touchStartY.current = null;
   };
+
+  const handleOverlayClick = () => {
+    if (!isDragging.current) closeLightbox();
+  };
+
+  const photoIndex = lightboxIndex !== null
+    ? photoImages.findIndex(img => img.url === images[lightboxIndex].url) + 1
+    : 0;
 
   return (
     <>
@@ -137,49 +156,62 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
 
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-[9999] bg-black/97 flex items-center justify-center"
-          onClick={closeLightbox}
+          className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
+          onClick={handleOverlayClick}
           onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
+          {/* Кнопка закрытия — большая, в углу, поверх всего */}
           <button
             onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
-            className="absolute top-3 right-3 md:top-4 md:right-4 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+            className="absolute top-4 right-4 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 active:bg-white/50 rounded-full flex items-center justify-center transition-colors touch-manipulation"
+            style={{ minWidth: 48, minHeight: 48 }}
           >
-            <Icon name="X" size={20} className="text-white" />
+            <Icon name="X" size={24} className="text-white" />
           </button>
 
+          {/* Стрелка влево */}
           <button
             onClick={(e) => { e.stopPropagation(); goPrev(); }}
-            className="absolute left-2 md:left-4 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+            className="absolute left-2 md:left-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 active:bg-white/50 rounded-full flex items-center justify-center transition-colors touch-manipulation"
+            style={{ minWidth: 48, minHeight: 48 }}
           >
-            <Icon name="ChevronLeft" size={24} className="text-white" />
+            <Icon name="ChevronLeft" size={28} className="text-white" />
           </button>
 
+          {/* Стрелка вправо */}
           <button
             onClick={(e) => { e.stopPropagation(); goNext(); }}
-            className="absolute right-2 md:right-4 z-10 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+            className="absolute right-2 md:right-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 active:bg-white/50 rounded-full flex items-center justify-center transition-colors touch-manipulation"
+            style={{ minWidth: 48, minHeight: 48 }}
           >
-            <Icon name="ChevronRight" size={24} className="text-white" />
+            <Icon name="ChevronRight" size={28} className="text-white" />
           </button>
 
+          {/* Картинка — не перехватывает клик для закрытия */}
           <div
-            className="w-full h-full flex flex-col items-center justify-center px-14 md:px-20"
+            className="flex flex-col items-center justify-center w-full h-full px-16 md:px-24 py-16"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={images[lightboxIndex].url}
               alt={images[lightboxIndex].title}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl select-none"
+              className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl select-none"
               draggable={false}
             />
-            <div className="text-center mt-3 md:mt-4 px-4">
+            <div className="text-center mt-4 px-4">
               <h3 className="text-base md:text-xl font-bold text-white">{images[lightboxIndex].title}</h3>
               <p className="text-xs md:text-sm text-gray-400 mt-1">
-                {lightboxIndex + 1} / {images.filter(i => !i.videoUrl).length}
+                {photoIndex} / {photoImages.length}
               </p>
             </div>
           </div>
+
+          {/* Подсказка закрытия снизу на мобилке */}
+          <p className="absolute bottom-4 left-0 right-0 text-center text-gray-500 text-xs md:hidden pointer-events-none">
+            Нажми вне фото чтобы закрыть
+          </p>
         </div>
       )}
     </>
