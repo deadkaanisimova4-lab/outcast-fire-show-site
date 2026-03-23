@@ -57,8 +57,18 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
   }, [lightboxIndex, goNext, goPrev]);
 
   useEffect(() => {
-    document.body.style.overflow = lightboxIndex !== null ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    if (lightboxIndex !== null) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
   }, [lightboxIndex]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
