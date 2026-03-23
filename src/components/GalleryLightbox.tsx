@@ -15,7 +15,7 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
-  const isDragging = useRef(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   const photoImages = images.filter(i => !i.videoUrl);
 
@@ -57,25 +57,13 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
   }, [lightboxIndex, goNext, goPrev]);
 
   useEffect(() => {
-    if (lightboxIndex !== null) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = lightboxIndex !== null ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [lightboxIndex]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
-    isDragging.current = false;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (touchStartX.current === null || touchStartY.current === null) return;
-    const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
-    const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
-    if (dx > 10 || dy > 10) isDragging.current = true;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
@@ -90,8 +78,11 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
     touchStartY.current = null;
   };
 
-  const handleOverlayClick = () => {
-    if (!isDragging.current) closeLightbox();
+  // Закрываем только если клик точно по оверлею (фону), а не по его детям
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === overlayRef.current) {
+      closeLightbox();
+    }
   };
 
   const photoIndex = lightboxIndex !== null
@@ -156,47 +147,38 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
 
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center cursor-zoom-out"
-          onClick={closeLightbox}
+          ref={overlayRef}
+          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center"
+          onClick={handleOverlayClick}
           onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Кнопка закрытия */}
           <button
-            onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
+            onClick={closeLightbox}
             className="absolute top-4 right-4 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
           >
             <Icon name="X" size={24} className="text-white" />
           </button>
 
-          {/* Стрелка влево */}
           <button
-            onClick={(e) => { e.stopPropagation(); goPrev(); }}
+            onClick={goPrev}
             className="absolute left-2 md:left-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
           >
             <Icon name="ChevronLeft" size={28} className="text-white" />
           </button>
 
-          {/* Стрелка вправо */}
           <button
-            onClick={(e) => { e.stopPropagation(); goNext(); }}
+            onClick={goNext}
             className="absolute right-2 md:right-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
           >
             <Icon name="ChevronRight" size={28} className="text-white" />
           </button>
 
-          {/* Картинка — клик по картинке НЕ закрывает */}
-          <div
-            className="flex flex-col items-center cursor-default"
-            style={{ maxWidth: 'calc(100vw - 140px)', maxHeight: 'calc(100vh - 80px)' }}
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="flex flex-col items-center px-16 md:px-24">
             <img
               src={images[lightboxIndex].url}
               alt={images[lightboxIndex].title}
-              style={{ maxHeight: 'calc(100vh - 140px)', maxWidth: '100%' }}
-              className="w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
+              className="block max-w-[calc(100vw-140px)] max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
               draggable={false}
             />
             <div className="text-center mt-3 px-4">
