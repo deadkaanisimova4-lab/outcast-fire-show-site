@@ -166,6 +166,7 @@ const Index = () => {
       description: "Парное выступление, наполненное огнём, искрами и драйвом современной музыки",
       duration: "6 минут",
       price: "от 18 000 ₽",
+      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/fbe27aea-aceb-4026-8f94-b6364649606a.jpg",
       videoUrl: "https://vk.com/wall-203229964_921",
       features: [
         "2 артиста",
@@ -184,6 +185,7 @@ const Index = () => {
       description: "Максимально современный, энергичный номер. Это взрыв спецэффектов в танце с огнем и пиротехникой. Современная хореография, популярная музыка - этот номер сформирован так, чтобы зритель получил WOW эффект",
       duration: "10 минут",
       price: "от 30 000 ₽",
+      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/d4b758b0-6859-4107-bffe-6570f1c5b392.jpg",
       videoUrl: "https://vk.com/wall-203229964_930",
       features: [
         "3-4 артиста на площадке",
@@ -202,6 +204,7 @@ const Index = () => {
       description: "Непередаваемая дикая энергия степей и огненных 'шаманов' прямиком с Урала. ЗДЕСЬ БУШУЕТ ОГОНЬ И ИСКРЫ",
       duration: "10 минут",
       price: "от 32 000 ₽",
+      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/628c5cb7-59af-4a33-a784-bde07524c600.jpg",
       videoUrl: "https://vk.com/wall-203229964_893",
       features: [
         "7 видов огненного реквизита",
@@ -220,6 +223,7 @@ const Index = () => {
       description: "Грандиозное огненное представление с максимальным количеством реквизита и спецэффектов",
       duration: "15 минут",
       price: "от 45 000 ₽",
+      image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/3c0ab2c8-2645-4122-a859-3dce25002f74.jpg",
       videoUrl: "https://vk.com/wall-203229964_836",
       features: [
         "8 видов огненного реквизита",
@@ -683,9 +687,19 @@ const Index = () => {
             {programs.map((program, index) => (
               <Card 
                 key={index} 
-                className="glass-card card-fire-hover rounded-xl"
+                className="glass-card card-fire-hover rounded-xl overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                {program.image && (
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={program.image}
+                      alt={program.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  </div>
+                )}
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4 animate-flicker">
                     <Icon name="Flame" size={24} />
