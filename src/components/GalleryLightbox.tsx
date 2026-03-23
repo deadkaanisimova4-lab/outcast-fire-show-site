@@ -58,11 +58,27 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
 
   useEffect(() => {
     if (lightboxIndex !== null) {
+      const scrollY = window.scrollY;
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
     } else {
+      const scrollY = parseInt(document.body.style.top || '0') * -1;
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      const scrollY = parseInt(document.body.style.top || '0') * -1;
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
+    };
   }, [lightboxIndex]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -188,16 +204,18 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
 
           {/* Картинка — клик по картинке НЕ закрывает */}
           <div
-            className="flex flex-col items-center justify-center max-w-5xl w-auto px-16 md:px-24 cursor-default"
+            className="flex flex-col items-center cursor-default"
+            style={{ maxWidth: 'calc(100vw - 140px)', maxHeight: 'calc(100vh - 80px)' }}
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={images[lightboxIndex].url}
               alt={images[lightboxIndex].title}
-              className="max-w-full max-h-[75vh] w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
+              style={{ maxHeight: 'calc(100vh - 140px)', maxWidth: '100%' }}
+              className="w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
               draggable={false}
             />
-            <div className="text-center mt-4 px-4">
+            <div className="text-center mt-3 px-4">
               <h3 className="text-base md:text-xl font-bold text-white">{images[lightboxIndex].title}</h3>
               <p className="text-xs md:text-sm text-gray-400 mt-1">
                 {photoIndex} / {photoImages.length}
