@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import Icon from '@/components/ui/icon';
 
 interface GalleryImage {
@@ -155,50 +156,49 @@ const GalleryLightbox = ({ images }: GalleryLightboxProps) => {
         ))}
       </div>
 
-      {lightboxIndex !== null && (
+      {lightboxIndex !== null && createPortal(
         <div
           ref={overlayRef}
-          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center"
+          style={{ position: 'fixed', inset: 0, zIndex: 99999, background: 'rgba(0,0,0,0.95)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleOverlayClick}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
+            style={{ position: 'absolute', top: 16, right: 16, zIndex: 10, width: 48, height: 48, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             <Icon name="X" size={24} className="text-white" />
           </button>
 
           <button
             onClick={goPrev}
-            className="absolute left-2 md:left-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
+            style={{ position: 'absolute', left: 16, zIndex: 10, width: 48, height: 48, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             <Icon name="ChevronLeft" size={28} className="text-white" />
           </button>
 
           <button
             onClick={goNext}
-            className="absolute right-2 md:right-6 z-20 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors touch-manipulation"
+            style={{ position: 'absolute', right: 16, zIndex: 10, width: 48, height: 48, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             <Icon name="ChevronRight" size={28} className="text-white" />
           </button>
 
-          <div className="flex flex-col items-center px-16 md:px-24">
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: 'calc(100vw - 140px)' }}>
             <img
               src={images[lightboxIndex].url}
               alt={images[lightboxIndex].title}
-              className="block max-w-[calc(100vw-140px)] max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
+              style={{ maxWidth: '100%', maxHeight: '80vh', width: 'auto', height: 'auto', borderRadius: 8, display: 'block' }}
               draggable={false}
             />
-            <div className="text-center mt-3 px-4">
-              <h3 className="text-base md:text-xl font-bold text-white">{images[lightboxIndex].title}</h3>
-              <p className="text-xs md:text-sm text-gray-400 mt-1">
-                {photoIndex} / {photoImages.length}
-              </p>
+            <div style={{ textAlign: 'center', marginTop: 12 }}>
+              <h3 style={{ color: 'white', fontWeight: 'bold', fontSize: 18 }}>{images[lightboxIndex].title}</h3>
+              <p style={{ color: '#9ca3af', fontSize: 13, marginTop: 4 }}>{photoIndex} / {photoImages.length}</p>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
