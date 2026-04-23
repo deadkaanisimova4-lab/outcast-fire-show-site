@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -32,29 +32,65 @@ const Index = () => {
     distance: '0'
   });
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
-  const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+  const noiseSourceRef = useRef<AudioBufferSourceNode | null>(null);
+  const gainNodeRef = useRef<GainNode | null>(null);
 
-  useEffect(() => {
-    const audio = new Audio('https://cdn.freesound.org/previews/376/376925_6880280-lq.mp3');
-    audio.loop = true;
-    audio.volume = 0.3;
-    setAudioElement(audio);
+  const startFireSound = () => {
+    const AudioContextClass = window.AudioContext || (window as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext || AudioContext;
+    const ctx = new AudioContextClass();
+    audioCtxRef.current = ctx;
 
-    return () => {
-      audio.pause();
-      audio.src = '';
-    };
-  }, []);
+    const bufferSize = ctx.sampleRate * 4;
+    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      data[i] = Math.random() * 2 - 1;
+    }
+
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.loop = true;
+
+    const lowpass = ctx.createBiquadFilter();
+    lowpass.type = 'lowpass';
+    lowpass.frequency.value = 600;
+    lowpass.Q.value = 0.5;
+
+    const highpass = ctx.createBiquadFilter();
+    highpass.type = 'highpass';
+    highpass.frequency.value = 80;
+
+    const gain = ctx.createGain();
+    gain.gain.value = 0.18;
+    gainNodeRef.current = gain;
+
+    source.connect(highpass);
+    highpass.connect(lowpass);
+    lowpass.connect(gain);
+    gain.connect(ctx.destination);
+    source.start();
+    noiseSourceRef.current = source;
+  };
+
+  const stopFireSound = () => {
+    if (noiseSourceRef.current) {
+      noiseSourceRef.current.stop();
+      noiseSourceRef.current = null;
+    }
+    if (audioCtxRef.current) {
+      audioCtxRef.current.close();
+      audioCtxRef.current = null;
+    }
+  };
 
   const toggleSound = () => {
-    if (audioElement) {
-      if (isSoundPlaying) {
-        audioElement.pause();
-        setIsSoundPlaying(false);
-      } else {
-        audioElement.play().catch(() => {});
-        setIsSoundPlaying(true);
-      }
+    if (isSoundPlaying) {
+      stopFireSound();
+      setIsSoundPlaying(false);
+    } else {
+      startFireSound();
+      setIsSoundPlaying(true);
     }
   };
 
