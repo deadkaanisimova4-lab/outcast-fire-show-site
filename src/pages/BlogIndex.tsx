@@ -67,6 +67,14 @@ const BlogContent = () => {
       image: 'https://cdn.poehali.dev/files/5e28f939-32a0-48c9-bc22-4e027c463c35.jpg',
       date: '18 февраля 2026',
       readTime: '7 минут'
+    },
+    {
+      id: 'ognennoe-shou-na-novyj-god',
+      title: 'Огненное шоу на свадьбу весной: как заказать в пиковый сезон',
+      description: 'Май, июнь, июль — пик свадебного сезона. Почему бронировать огненное шоу нужно заранее, какую программу выбрать и как не остаться без артистов.',
+      image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
+      date: '23 апреля 2026',
+      readTime: '6 минут'
     }
   ];
 

@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -13,43 +13,49 @@
   </url>
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/kak-vybrat-ognennoe-shou-dlya-svadby</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/top-5-ploshchadok-v-chelyabinske-dlya-faier-shou</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/chto-takoe-faier-shou-vidy-i-stili</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/ognennoe-shou-na-korporativ</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/bezopasnost-ognennogo-shou</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/ognennoe-shou-na-den-rozhdeniya</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/ognennoe-shou-na-novyj-god</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
