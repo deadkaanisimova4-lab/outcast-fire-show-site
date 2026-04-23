@@ -1245,6 +1245,56 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-black scroll-reveal">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold fire-glow">Из блога</h2>
+              <p className="text-muted-foreground mt-2">Полезные статьи об огненном шоу</p>
+            </div>
+            <a href="/blog" className="text-primary hover:text-primary/80 transition-colors flex items-center gap-2 font-medium">
+              Все статьи
+              <Icon name="ArrowRight" size={18} />
+            </a>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <a href="/blog/kak-vybrat-ognennoe-shou-dlya-svadby" className="group block">
+              <Card className="glass-card card-fire-hover rounded-xl overflow-hidden h-full">
+                <div className="overflow-hidden">
+                  <img src="https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg" alt="Как выбрать огненное шоу для свадьбы" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <CardContent className="p-5">
+                  <p className="text-xs text-muted-foreground mb-2">25 ноября 2024 · 7 минут</p>
+                  <h3 className="text-white font-bold group-hover:text-primary transition-colors">Как выбрать огненное шоу для свадьбы</h3>
+                </CardContent>
+              </Card>
+            </a>
+            <a href="/blog/ognennoe-shou-na-korporativ" className="group block">
+              <Card className="glass-card card-fire-hover rounded-xl overflow-hidden h-full">
+                <div className="overflow-hidden">
+                  <img src="https://cdn.poehali.dev/files/d524fd97-2aa3-484d-ae46-9fa3748e5790.jpg" alt="Огненное шоу на корпоратив" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <CardContent className="p-5">
+                  <p className="text-xs text-muted-foreground mb-2">15 февраля 2026 · 8 минут</p>
+                  <h3 className="text-white font-bold group-hover:text-primary transition-colors">Огненное шоу на корпоратив: как удивить коллег</h3>
+                </CardContent>
+              </Card>
+            </a>
+            <a href="/blog/ognennoe-shou-na-novyj-god" className="group block">
+              <Card className="glass-card card-fire-hover rounded-xl overflow-hidden h-full">
+                <div className="overflow-hidden">
+                  <img src="https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg" alt="Огненное шоу на свадьбу весной" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <CardContent className="p-5">
+                  <p className="text-xs text-muted-foreground mb-2">23 апреля 2026 · 6 минут</p>
+                  <h3 className="text-white font-bold group-hover:text-primary transition-colors">Огненное шоу на свадьбу весной: как заказать в пиковый сезон</h3>
+                </CardContent>
+              </Card>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {showScrollTop && (
         <button
           onClick={scrollToTop}
