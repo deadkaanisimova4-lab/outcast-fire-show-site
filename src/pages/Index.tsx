@@ -41,6 +41,7 @@ const Index = () => {
     const ctx = new AudioContextClass();
     audioCtxRef.current = ctx;
 
+    // === Слой 1: базовый шум костра (низкочастотное гудение) ===
     const bufferSize = ctx.sampleRate * 4;
     const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
     const data = buffer.getChannelData(0);
@@ -48,29 +49,67 @@ const Index = () => {
       data[i] = Math.random() * 2 - 1;
     }
 
-    const source = ctx.createBufferSource();
-    source.buffer = buffer;
-    source.loop = true;
+    const baseSource = ctx.createBufferSource();
+    baseSource.buffer = buffer;
+    baseSource.loop = true;
 
     const lowpass = ctx.createBiquadFilter();
     lowpass.type = 'lowpass';
-    lowpass.frequency.value = 600;
-    lowpass.Q.value = 0.5;
+    lowpass.frequency.value = 400;
+    lowpass.Q.value = 1.2;
 
     const highpass = ctx.createBiquadFilter();
     highpass.type = 'highpass';
-    highpass.frequency.value = 80;
+    highpass.frequency.value = 60;
 
-    const gain = ctx.createGain();
-    gain.gain.value = 0.18;
-    gainNodeRef.current = gain;
+    const baseGain = ctx.createGain();
+    baseGain.gain.value = 0.12;
 
-    source.connect(highpass);
+    baseSource.connect(highpass);
     highpass.connect(lowpass);
-    lowpass.connect(gain);
-    gain.connect(ctx.destination);
-    source.start();
-    noiseSourceRef.current = source;
+    lowpass.connect(baseGain);
+    baseGain.connect(ctx.destination);
+    baseSource.start();
+    noiseSourceRef.current = baseSource;
+
+    // === Слой 2: треск искр (случайные щелчки) ===
+    const crackleBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const crackleData = crackleBuffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      // редкие случайные щелчки — имитация треска дров
+      crackleData[i] = Math.random() < 0.003 ? (Math.random() * 2 - 1) * 1.5 : 0;
+    }
+
+    const crackleSource = ctx.createBufferSource();
+    crackleSource.buffer = crackleBuffer;
+    crackleSource.loop = true;
+
+    const crackleFilter = ctx.createBiquadFilter();
+    crackleFilter.type = 'bandpass';
+    crackleFilter.frequency.value = 1800;
+    crackleFilter.Q.value = 0.4;
+
+    const crackleGain = ctx.createGain();
+    crackleGain.gain.value = 0.22;
+
+    crackleSource.connect(crackleFilter);
+    crackleFilter.connect(crackleGain);
+    crackleGain.connect(ctx.destination);
+    crackleSource.start();
+
+    // === Слой 3: мерцание громкости (живое дыхание огня) ===
+    const masterGain = ctx.createGain();
+    masterGain.gain.value = 1;
+    gainNodeRef.current = masterGain;
+
+    const lfo = ctx.createOscillator();
+    lfo.type = 'sine';
+    lfo.frequency.value = 0.3;
+    const lfoGain = ctx.createGain();
+    lfoGain.gain.value = 0.04;
+    lfo.connect(lfoGain);
+    lfoGain.connect(masterGain.gain);
+    lfo.start();
   };
 
   const stopFireSound = () => {
