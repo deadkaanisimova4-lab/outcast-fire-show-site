@@ -35,26 +35,14 @@ const Index = () => {
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio('https://www.soundjay.com/nature/sounds/campfire-1.mp3');
+    const audio = new Audio('https://cdn.freesound.org/previews/376/376925_6880280-lq.mp3');
     audio.loop = true;
-    audio.volume = 0.25;
+    audio.volume = 0.3;
     setAudioElement(audio);
-
-    const playSound = () => {
-      audio.play().catch(() => {});
-      setIsSoundPlaying(true);
-      document.removeEventListener('click', playSound);
-      document.removeEventListener('touchstart', playSound);
-    };
-
-    document.addEventListener('click', playSound);
-    document.addEventListener('touchstart', playSound);
 
     return () => {
       audio.pause();
       audio.src = '';
-      document.removeEventListener('click', playSound);
-      document.removeEventListener('touchstart', playSound);
     };
   }, []);
 
@@ -71,13 +59,14 @@ const Index = () => {
   };
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
     const createParticle = () => {
       const particle = document.createElement('div');
       particle.className = 'fire-particle';
       const left = Math.random() * 100;
       const duration = 3 + Math.random() * 4;
       const xOffset = (Math.random() - 0.5) * 100;
-      const size = 2 + Math.random() * 4;
+      const size = isMobile ? 1.5 + Math.random() * 2 : 2 + Math.random() * 4;
       
       particle.style.left = `${left}%`;
       particle.style.animationDuration = `${duration}s`;
@@ -93,7 +82,7 @@ const Index = () => {
       }
     };
 
-    const interval = setInterval(createParticle, 200);
+    const interval = setInterval(createParticle, isMobile ? 400 : 200);
     return () => clearInterval(interval);
   }, []);
 
