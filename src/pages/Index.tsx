@@ -1287,19 +1287,19 @@ const Index = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 left-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
+          className="fixed bottom-6 left-6 z-50 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
           aria-label="Наверх"
         >
-          <Icon name="ArrowUp" size={24} />
+          <Icon name="ArrowUp" size={20} />
         </button>
       )}
 
       <button
         onClick={toggleSound}
-        className="fixed bottom-6 left-24 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/50 transition-all hover-scale"
+        className="fixed bottom-6 right-6 z-50 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/50 transition-all hover-scale"
         aria-label={isSoundPlaying ? "Выключить звук" : "Включить звук"}
       >
-        <Icon name={isSoundPlaying ? "Volume2" : "VolumeX"} size={24} />
+        <Icon name={isSoundPlaying ? "Volume2" : "VolumeX"} size={20} />
       </button>
 
       <footer className="bg-card border-t border-primary/20 py-6 md:py-8">
