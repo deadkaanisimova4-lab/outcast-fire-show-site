@@ -1344,14 +1344,14 @@ const Index = () => {
                 </CardContent>
               </Card>
             </a>
-            <a href="/blog/ognennoe-shou-na-novyj-god" className="group block">
+            <a href="/blog/ognennoe-shou-na-novyj-god-tseny" className="group block">
               <Card className="glass-card card-fire-hover rounded-xl overflow-hidden h-full">
                 <div className="overflow-hidden">
-                  <img src="https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg" alt="Огненное шоу на свадьбу весной" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img src="https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/files/a8774fc3-2863-4ed4-be83-e56994b2ada4.jpg" alt="Огненное шоу на Новый год" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
                 <CardContent className="p-5">
-                  <p className="text-xs text-muted-foreground mb-2">23 апреля 2026 · 6 минут</p>
-                  <h3 className="text-white font-bold group-hover:text-primary transition-colors">Огненное шоу на свадьбу весной: как заказать в пиковый сезон</h3>
+                  <p className="text-xs text-muted-foreground mb-2">2 мая 2026 · 7 минут</p>
+                  <h3 className="text-white font-bold group-hover:text-primary transition-colors">Огненное шоу на Новый год: что важно знать о ценах</h3>
                 </CardContent>
               </Card>
             </a>

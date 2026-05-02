@@ -75,6 +75,14 @@ const BlogContent = () => {
       image: 'https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg',
       date: '23 апреля 2026',
       readTime: '6 минут'
+    },
+    {
+      id: 'ognennoe-shou-na-novyj-god-tseny',
+      title: 'Огненное шоу на Новый год: что важно знать о ценах',
+      description: 'Новогодний период — особое время. Цены выше, даты расхватывают быстро. Рассказываем честно: почему так, сколько стоит и когда лучше бронировать.',
+      image: 'https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/files/a8774fc3-2863-4ed4-be83-e56994b2ada4.jpg',
+      date: '2 мая 2026',
+      readTime: '7 минут'
     }
   ];
 
