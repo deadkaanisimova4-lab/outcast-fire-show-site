@@ -164,7 +164,7 @@ const BlogArticle8 = () => {
                   </div>
                   <p className="text-gray-400 mb-3">Атмосферное шоу с этническим колоритом. Особенно выигрышно смотрится на открытом воздухе зимой.</p>
                   <p className="text-gray-500 line-through text-sm">от 32 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 44 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-primary font-bold text-lg">от 96 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6">
@@ -176,7 +176,7 @@ const BlogArticle8 = () => {
                   </div>
                   <p className="text-gray-400 mb-3">Полноценный спектакль. Для тех, кто хочет сделать Новый год по-настоящему незабываемым.</p>
                   <p className="text-gray-500 line-through text-sm">от 45 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 62 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-primary font-bold text-lg">от 135 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
               </div>
 
