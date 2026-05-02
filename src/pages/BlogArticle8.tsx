@@ -83,7 +83,7 @@ const BlogArticle8 = () => {
                   <div>
                     <h3 className="text-lg font-bold text-yellow-400 mb-2">Важно знать заранее</h3>
                     <p className="text-gray-300">
-                      В период с <strong className="text-white">15 декабря по 10 января</strong> действуют новогодние тарифы — стоимость программ выше стандартной на <strong className="text-white">30–40%</strong>. Это стандартная практика всего event-рынка, и мы не исключение.
+                      В период с <strong className="text-white">15 декабря по 10 января</strong> действуют новогодние тарифы — стоимость программ выше стандартной в <strong className="text-white">3 раза</strong>. Это стандартная практика всего event-рынка, и мы не исключение.
                     </p>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ const BlogArticle8 = () => {
                   </div>
                   <p className="text-gray-400 mb-3">Камерное романтичное шоу. Подойдёт для небольшой компании или семейного праздника.</p>
                   <p className="text-gray-500 line-through text-sm">от 18 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 25 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-primary font-bold text-lg">от 54 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-primary/30 rounded-lg p-6 relative">
@@ -152,7 +152,7 @@ const BlogArticle8 = () => {
                   </div>
                   <p className="text-gray-400 mb-3">Самый популярный выбор на корпоративы. Яркое динамичное шоу с запоминающимся финалом.</p>
                   <p className="text-gray-500 line-through text-sm">от 30 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 42 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-primary font-bold text-lg">от 90 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6">
