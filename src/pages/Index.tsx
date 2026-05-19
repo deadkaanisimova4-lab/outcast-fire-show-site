@@ -1117,6 +1117,58 @@ const Index = () => {
 
       <FireDivider variant="spark" />
 
+      {/* Блок безопасности и документов */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-black to-card scroll-reveal">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 fire-glow">Безопасность и документы</h2>
+          <p className="text-center text-sm sm:text-base text-muted-foreground mb-8 md:mb-12 px-4">
+            Работаем официально — все документы в порядке
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {[
+              {
+                icon: 'Shield',
+                title: 'Страховка',
+                desc: 'Гражданская ответственность застрахована. Вы защищены на случай любых непредвиденных ситуаций.',
+              },
+              {
+                icon: 'FileCheck',
+                title: 'Пожарная безопасность',
+                desc: 'Соблюдаем все требования МЧС. Работаем с сертифицированными огнеупорными материалами.',
+              },
+              {
+                icon: 'BadgeCheck',
+                title: 'Опыт 7+ лет',
+                desc: 'Более 500 успешных выступлений без единого инцидента. Профессионализм подтверждён практикой.',
+              },
+              {
+                icon: 'Flame',
+                title: 'Безопасные реагенты',
+                desc: 'Используем только сертифицированное топливо и проверенное оборудование ведущих производителей.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-card/60 border border-border rounded-xl p-6 flex flex-col items-center text-center hover:border-primary/50 transition-colors">
+                <div className="bg-primary/20 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                  <Icon name={item.icon as "Shield"} size={28} className="text-primary" />
+                </div>
+                <h3 className="font-bold text-white text-lg mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 bg-primary/10 border border-primary/30 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="bg-primary/20 rounded-full w-12 h-12 flex-shrink-0 flex items-center justify-center">
+              <Icon name="Info" size={22} className="text-primary" />
+            </div>
+            <p className="text-muted-foreground text-sm">
+              Перед каждым выступлением проводим осмотр площадки, согласуем зоны безопасности с организаторами и держим наготове средства пожаротушения. <span className="text-primary font-medium">Безопасность гостей — наш главный приоритет.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <FireDivider variant="spark" />
+
       <section className="py-12 md:py-20 bg-gradient-to-b from-black to-card scroll-reveal">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 fire-glow">Частые вопросы</h2>
