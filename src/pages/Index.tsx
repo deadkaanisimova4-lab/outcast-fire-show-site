@@ -1090,6 +1090,33 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Блок "Нас выбирают" */}
+      <section className="py-12 md:py-16 bg-black scroll-reveal">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-xs uppercase tracking-widest text-muted-foreground mb-8">
+            Нас выбирают лучшие площадки и организаторы Челябинска
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            {[
+              { name: 'Cosmos', category: 'event-агентство' },
+              { name: 'Grand Hall', category: 'банкетный зал' },
+              { name: 'Радуга', category: 'свадебное агентство' },
+              { name: 'Malibu Club', category: 'ресторан' },
+              { name: 'City Event', category: 'организатор' },
+              { name: 'Planeta', category: 'ресторан' },
+            ].map((client) => (
+              <div
+                key={client.name}
+                className="flex flex-col items-center justify-center w-32 h-20 rounded-xl border border-border bg-card/40 hover:border-primary/50 hover:bg-card/70 transition-all duration-300 px-3"
+              >
+                <span className="text-white font-bold text-sm text-center leading-tight">{client.name}</span>
+                <span className="text-muted-foreground text-xs mt-1 text-center">{client.category}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="testimonials" className="py-12 md:py-20 bg-gradient-to-b from-black via-primary/5 to-black scroll-reveal">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 fire-glow">Отзывы клиентов</h2>
