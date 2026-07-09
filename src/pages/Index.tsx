@@ -1242,12 +1242,7 @@ const Index = () => {
               {
                 icon: 'Clock',
                 title: 'Время на подготовку',
-                desc: 'Артистам нужно 30-40 минут до начала шоу на подготовку реквизита и переодевание.',
-              },
-              {
-                icon: 'CloudRain',
-                title: 'Погодные условия',
-                desc: 'Для уличного шоу важен прогноз без сильного ветра и осадков. Согласуем запасной вариант заранее.',
+                desc: 'Артистам нужно минимум 2 часа до начала шоу на подготовку реквизита и переодевание.',
               },
             ].map((item) => (
               <div key={item.title} className="bg-card/60 border border-border rounded-xl p-6 flex flex-col items-center text-center hover:border-primary/50 transition-colors">
