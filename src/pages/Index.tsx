@@ -575,6 +575,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('installations')} className="hover:text-primary transition-colors">Инсталляции</button>
               <button onClick={() => scrollToSection('gallery')} className="hover:text-primary transition-colors">Галерея</button>
               <button onClick={() => scrollToSection('prices')} className="hover:text-primary transition-colors">Цены</button>
+              <button onClick={() => scrollToSection('rider')} className="hover:text-primary transition-colors">Райдер</button>
               <a href="/blog" className="hover:text-primary transition-colors">Блог</a>
               <button onClick={() => scrollToSection('contacts')} className="hover:text-primary transition-colors">Контакты</button>
             </div>
@@ -635,6 +636,10 @@ const Index = () => {
               <button onClick={() => scrollToSection('prices')} className="flex items-center gap-3 w-full text-left py-3 px-4 hover:bg-primary/20 rounded-lg transition-colors">
                 <Icon name="DollarSign" size={18} className="text-primary" />
                 <span>Цены</span>
+              </button>
+              <button onClick={() => scrollToSection('rider')} className="flex items-center gap-3 w-full text-left py-3 px-4 hover:bg-primary/20 rounded-lg transition-colors">
+                <Icon name="ClipboardList" size={18} className="text-primary" />
+                <span>Райдер</span>
               </button>
               <button onClick={() => scrollToSection('contacts')} className="flex items-center gap-3 w-full text-left py-3 px-4 hover:bg-primary/20 rounded-lg transition-colors">
                 <Icon name="Mail" size={18} className="text-primary" />
@@ -1206,7 +1211,7 @@ const Index = () => {
       <FireDivider variant="spark" />
 
       {/* Технический райдер */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-card to-black scroll-reveal">
+      <section id="rider" className="py-12 md:py-20 bg-gradient-to-b from-card to-black scroll-reveal">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 fire-glow">Технический райдер</h2>
           <p className="text-center text-sm sm:text-base text-muted-foreground mb-8 md:mb-12 px-4 max-w-2xl mx-auto">
