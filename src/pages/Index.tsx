@@ -1205,6 +1205,68 @@ const Index = () => {
 
       <FireDivider variant="spark" />
 
+      {/* Технический райдер */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-card to-black scroll-reveal">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 fire-glow">Технический райдер</h2>
+          <p className="text-center text-sm sm:text-base text-muted-foreground mb-8 md:mb-12 px-4 max-w-2xl mx-auto">
+            Чтобы выступление прошло идеально, организатору нужно подготовить всего несколько вещей
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                icon: 'Ruler',
+                title: 'Площадка',
+                desc: 'Открытое пространство от 4×4 метров, свободное от навесов, деревьев и легковоспламеняющихся материалов.',
+              },
+              {
+                icon: 'Users',
+                title: 'Зона безопасности',
+                desc: 'Расстояние не менее 3 метров между зрителями и артистами. Мы размечаем зону перед началом.',
+              },
+              {
+                icon: 'Zap',
+                title: 'Электричество',
+                desc: 'Розетка 220В в пределах 20-30 метров от площадки — для звука и подсветки выступления.',
+              },
+              {
+                icon: 'Car',
+                title: 'Подъезд и парковка',
+                desc: 'Место для парковки автомобиля с реквизитом рядом с площадкой выступления.',
+              },
+              {
+                icon: 'Clock',
+                title: 'Время на подготовку',
+                desc: 'Артистам нужно 30-40 минут до начала шоу на подготовку реквизита и переодевание.',
+              },
+              {
+                icon: 'CloudRain',
+                title: 'Погодные условия',
+                desc: 'Для уличного шоу важен прогноз без сильного ветра и осадков. Согласуем запасной вариант заранее.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-card/60 border border-border rounded-xl p-6 flex flex-col items-center text-center hover:border-primary/50 transition-colors">
+                <div className="bg-primary/20 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                  <Icon name={item.icon as "Ruler"} size={28} className="text-primary" />
+                </div>
+                <h3 className="font-bold text-white text-lg mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 bg-primary/10 border border-primary/30 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left max-w-5xl mx-auto">
+            <div className="bg-primary/20 rounded-full w-12 h-12 flex-shrink-0 flex items-center justify-center">
+              <Icon name="MessageCircle" size={22} className="text-primary" />
+            </div>
+            <p className="text-muted-foreground text-sm">
+              Не переживайте, если чего-то не хватает — при бронировании мы созвонимся и вместе подготовим площадку под ваше мероприятие.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <FireDivider variant="spark" />
+
       <section className="py-12 md:py-20 bg-gradient-to-b from-black to-card scroll-reveal">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 fire-glow">Частые вопросы</h2>
