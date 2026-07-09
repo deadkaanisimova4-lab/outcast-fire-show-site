@@ -64,6 +64,7 @@ const BlogArticle8 = () => {
             <img
               src="https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/files/a8774fc3-2863-4ed4-be83-e56994b2ada4.jpg"
               alt="Огненное шоу на Новый год"
+              loading="lazy"
               className="w-full h-96 object-cover rounded-lg mb-12 shadow-2xl"
             />
 

@@ -64,6 +64,7 @@ const BlogArticle6 = () => {
             <img
               src="https://cdn.poehali.dev/files/5e28f939-32a0-48c9-bc22-4e027c463c35.jpg"
               alt="Огненное шоу на день рождения"
+              loading="lazy"
               className="w-full h-96 object-cover rounded-lg mb-12 shadow-2xl"
             />
 

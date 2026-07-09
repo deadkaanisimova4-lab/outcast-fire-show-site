@@ -67,6 +67,7 @@ const BlogArticle1 = () => {
           <img 
             src="https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg" 
             alt="Огненное шоу на свадьбе"
+            loading="lazy"
             className="w-full h-96 object-cover rounded-lg mb-12 shadow-2xl"
           />
 

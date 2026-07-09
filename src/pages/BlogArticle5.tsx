@@ -64,6 +64,7 @@ const BlogArticle5 = () => {
             <img
               src="https://cdn.poehali.dev/files/282a58c5-553c-4af6-b6e2-c9bf922c59c0.jpg"
               alt="Безопасное огненное шоу"
+              loading="lazy"
               className="w-full h-96 object-cover rounded-lg mb-12 shadow-2xl"
             />
 
