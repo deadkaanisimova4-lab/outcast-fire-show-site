@@ -144,9 +144,20 @@ const AvailabilityCalendar = () => {
           <p className="text-sm text-white font-semibold mb-1">
             {new Date(selectedDate!).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' })}
           </p>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-muted-foreground mb-4">
             Свободно: {selectedInfo.show_limit} шоу, {selectedInfo.installation_limit} инсталляций
           </p>
+          <a
+            href={`https://vk.me/write-203229964?text=${encodeURIComponent(
+              `Здравствуйте! Хочу забронировать дату ${new Date(selectedDate!).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })}. Расскажите, пожалуйста, что нужно для оформления.`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity text-white font-semibold text-sm py-2.5 px-5 rounded-lg"
+          >
+            <Icon name="MessageCircle" size={16} />
+            Забронировать эту дату
+          </a>
         </div>
       )}
 
