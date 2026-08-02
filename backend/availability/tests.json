@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "name": "Получить список доступных дат",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Попытка изменить лимит без пароля",
+      "method": "POST",
+      "path": "/",
+      "body": {"date": "2026-09-01", "show_limit": 2, "installation_limit": 3},
+      "expectedStatus": 401
+    }
+  ]
+}
