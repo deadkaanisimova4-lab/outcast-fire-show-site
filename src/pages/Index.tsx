@@ -1477,6 +1477,29 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-12 bg-black scroll-reveal">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold fire-glow text-center mb-8">Огненное шоу для вашего праздника</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <a href="/ognennoe-shou-na-svadbu" className="block bg-card border border-primary/20 hover:border-primary/60 rounded-xl p-6 text-center transition-all">
+              <Icon name="Heart" size={28} className="text-primary mx-auto mb-3" />
+              <h3 className="font-bold mb-1">На свадьбу</h3>
+              <p className="text-sm text-muted-foreground">Программы и цены от 18 000 ₽</p>
+            </a>
+            <a href="/ognennoe-shou-na-korporativ" className="block bg-card border border-primary/20 hover:border-primary/60 rounded-xl p-6 text-center transition-all">
+              <Icon name="Users" size={28} className="text-primary mx-auto mb-3" />
+              <h3 className="font-bold mb-1">На корпоратив</h3>
+              <p className="text-sm text-muted-foreground">Программы и цены от 18 000 ₽</p>
+            </a>
+            <a href="/ognennoe-shou-na-den-rozhdeniya" className="block bg-card border border-primary/20 hover:border-primary/60 rounded-xl p-6 text-center transition-all">
+              <Icon name="Gift" size={28} className="text-primary mx-auto mb-3" />
+              <h3 className="font-bold mb-1">На день рождения</h3>
+              <p className="text-sm text-muted-foreground">Программы и цены от 18 000 ₽</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-black scroll-reveal">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-10">

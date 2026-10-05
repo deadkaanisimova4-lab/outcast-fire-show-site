@@ -16,6 +16,9 @@ import BlogArticle6 from "./pages/BlogArticle6";
 import BlogArticle7 from "./pages/BlogArticle7";
 import BlogArticle8 from "./pages/BlogArticle8";
 import AdminCalendar from "./pages/AdminCalendar";
+import WeddingPage from "./pages/WeddingPage";
+import CorporatePage from "./pages/CorporatePage";
+import BirthdayPage from "./pages/BirthdayPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,9 @@ const App = () => (
           <Route path="/blog/ognennoe-shou-na-den-rozhdeniya" element={<BlogArticle6 />} />
           <Route path="/blog/ognennoe-shou-na-novyj-god" element={<BlogArticle7 />} />
           <Route path="/blog/ognennoe-shou-na-novyj-god-tseny" element={<BlogArticle8 />} />
+          <Route path="/ognennoe-shou-na-svadbu" element={<WeddingPage />} />
+          <Route path="/ognennoe-shou-na-korporativ" element={<CorporatePage />} />
+          <Route path="/ognennoe-shou-na-den-rozhdeniya" element={<BirthdayPage />} />
           <Route path="/admin-calendar" element={<AdminCalendar />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
