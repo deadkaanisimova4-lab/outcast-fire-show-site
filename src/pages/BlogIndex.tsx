@@ -83,6 +83,14 @@ const BlogContent = () => {
       image: 'https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/files/a8774fc3-2863-4ed4-be83-e56994b2ada4.jpg',
       date: '2 мая 2026',
       readTime: '7 минут'
+    },
+    {
+      id: 'russkoe-ognennoe-shou-na-svadbu',
+      title: 'Русское огненное шоу на свадьбу в Челябинске: постановка RUSSIAN STYLE',
+      description: 'Яркие костюмы, синхронные элементы, море огня и треки, которые подпевают все гости. Что входит в постановку, кому подойдёт и сколько стоит.',
+      image: '/russian-style-cover.jpg',
+      date: '18 октября 2026',
+      readTime: '6 минут'
     }
   ];
 

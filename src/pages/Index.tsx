@@ -298,7 +298,7 @@ const Index = () => {
       duration: "10 минут",
       facts: ["4 артиста", "6 видов огня", "4 вида пиротехники"],
       price: "от 43 000 ₽",
-      image: "/russian-style.jpg",
+      image: "/russian-style-cover.jpg",
       videoUrl: "https://vk.ru/wall-203229964_1078",
       features: [
         "4 артиста на площадке",
@@ -1570,7 +1570,7 @@ const Index = () => {
               <Icon name="ArrowRight" size={18} />
             </a>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="/blog/kak-vybrat-ognennoe-shou-dlya-svadby" className="group block">
               <Card className="glass-card card-fire-hover rounded-xl overflow-hidden h-full">
                 <div className="overflow-hidden">
@@ -1596,11 +1596,22 @@ const Index = () => {
             <a href="/blog/ognennoe-shou-na-novyj-god-tseny" className="group block">
               <Card className="glass-card card-fire-hover rounded-xl overflow-hidden h-full">
                 <div className="overflow-hidden">
-                  <img src="https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/files/a8774fc3-2863-4ed4-be83-e56994b2ada4.jpg" alt="Огненное шоу на Новый год" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img src="https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/files/a8774fc3-2863-4ed4-be83-e56994b2ada4.jpg" alt="Огненное шоу на Новый год" loading="lazy" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
                 <CardContent className="p-5">
                   <p className="text-xs text-muted-foreground mb-2">2 мая 2026 · 7 минут</p>
                   <h3 className="text-white font-bold group-hover:text-primary transition-colors">Огненное шоу на Новый год: что важно знать о ценах</h3>
+                </CardContent>
+              </Card>
+            </a>
+            <a href="/blog/russkoe-ognennoe-shou-na-svadbu" className="group block">
+              <Card className="glass-card card-fire-hover rounded-xl overflow-hidden h-full">
+                <div className="overflow-hidden">
+                  <img src="/russian-style-cover.jpg" alt="Русское огненное шоу на свадьбу в Челябинске" loading="lazy" className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <CardContent className="p-5">
+                  <p className="text-xs text-muted-foreground mb-2">18 октября 2026 · 6 минут</p>
+                  <h3 className="text-white font-bold group-hover:text-primary transition-colors">Русское огненное шоу на свадьбу: постановка RUSSIAN STYLE</h3>
                 </CardContent>
               </Card>
             </a>
