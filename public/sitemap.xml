@@ -103,4 +103,14 @@
       <image:title>Огненное шоу на юбилей в Челябинске</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/ognennoe-shou-na-vypusknoj-v-chelyabinske</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/vypusknoj-cover.jpg</image:loc>
+      <image:title>Огненное шоу на выпускной в Челябинске</image:title>
+    </image:image>
+  </url>
 </urlset>

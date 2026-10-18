@@ -99,6 +99,14 @@ const BlogContent = () => {
       image: '/yubilej-cover.jpg',
       date: '18 октября 2026',
       readTime: '7 минут'
+    },
+    {
+      id: 'ognennoe-shou-na-vypusknoj-v-chelyabinske',
+      title: 'Огненное шоу на выпускной в Челябинске: как сделать вечер, который запомнят',
+      description: 'Какую программу выбрать для выпускного, как обеспечить безопасность, что добавить к шоу, сколько это стоит и когда бронировать дату.',
+      image: '/vypusknoj-cover.jpg',
+      date: '18 октября 2026',
+      readTime: '7 минут'
     }
   ];
 

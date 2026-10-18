@@ -17,6 +17,7 @@ import BlogArticle7 from "./pages/BlogArticle7";
 import BlogArticle8 from "./pages/BlogArticle8";
 import BlogArticle9 from "./pages/BlogArticle9";
 import BlogArticle10 from "./pages/BlogArticle10";
+import BlogArticle11 from "./pages/BlogArticle11";
 import AdminCalendar from "./pages/AdminCalendar";
 import WeddingPage from "./pages/WeddingPage";
 import CorporatePage from "./pages/CorporatePage";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/blog/ognennoe-shou-na-novyj-god-tseny" element={<BlogArticle8 />} />
           <Route path="/blog/russkoe-ognennoe-shou-na-svadbu" element={<BlogArticle9 />} />
           <Route path="/blog/ognennoe-shou-na-yubilej-v-chelyabinske" element={<BlogArticle10 />} />
+          <Route path="/blog/ognennoe-shou-na-vypusknoj-v-chelyabinske" element={<BlogArticle11 />} />
           <Route path="/ognennoe-shou-na-svadbu" element={<WeddingPage />} />
           <Route path="/ognennoe-shou-na-korporativ" element={<CorporatePage />} />
           <Route path="/ognennoe-shou-na-den-rozhdeniya" element={<BirthdayPage />} />
