@@ -136,7 +136,7 @@ const EventLanding = ({ data }: { data: LandingData }) => {
               {data.programs.map((p) => (
                 <div
                   key={p.name}
-                  className={`rounded-xl p-6 border ${p.highlight ? 'border-primary bg-primary/10' : 'border-primary/20 bg-black/40'}`}
+                  className={`rounded-xl p-6 border sm:[&:last-child:nth-child(odd)]:col-span-2 ${p.highlight ? 'border-primary bg-primary/10' : 'border-primary/20 bg-black/40'}`}
                 >
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="text-xl font-bold">{p.name}</h3>

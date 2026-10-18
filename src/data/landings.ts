@@ -3,6 +3,7 @@ import type { LandingData } from '@/components/EventLanding';
 const MYSTIC = { name: 'Постановка «MYSTIC»', description: 'Парное выступление с огнём, искрами и динамичной музыкой. Компактный формат для небольших площадок.', duration: '6 минут', price: 20000 };
 const TRAILER = { name: 'Постановка «TRAILER»', description: 'Энергичное шоу с огнём, пиротехникой и спецэффектами. Подходит для банкетных залов и открытых площадок.', duration: '10 минут', price: 35000 };
 const SHAMANISM = { name: 'Постановка «SHAMANISM»', description: 'Дикая энергия степей и огненных шаманов: мощный визуальный образ и необычная подача.', duration: '10 минут', price: 38000 };
+const RUSSIAN = { name: 'Постановка «RUSSIAN STYLE»', description: 'Номер в русских традициях в новом формате: яркие костюмы, синхронные элементы, море огня и узнаваемые треки, которые подхватывают все гости.', duration: '10 минут', price: 43000 };
 const SORRY_MAX = { name: 'Постановка «SORRY MAX»', description: 'Грандиозное шоу с 8 видами реквизита и пиротехникой для масштабных праздников.', duration: '15 минут', price: 50000 };
 
 const SCENARIO = [
@@ -40,7 +41,7 @@ export const weddingLanding: LandingData = {
     { icon: 'Camera', title: 'Фото с артистами', text: 'По желанию проводим короткую фотосессию с артистами для молодожёнов и гостей.' },
   ],
   programsTitle: 'Программы и цены на огненное шоу для свадьбы',
-  programs: [MYSTIC, { ...TRAILER, highlight: true }, SHAMANISM, SORRY_MAX],
+  programs: [MYSTIC, { ...TRAILER, highlight: true }, SHAMANISM, RUSSIAN, SORRY_MAX],
   extrasTitle: 'Свадебные инсталляции и эффекты',
   extras: EXTRAS,
   scenario: SCENARIO,
@@ -79,7 +80,7 @@ export const corporateLanding: LandingData = {
     { icon: 'MapPin', title: 'Выезд по области', text: 'Выступаем в Челябинске, Магнитогорске, Миассе, Златоусте и в других городах области.' },
   ],
   programsTitle: 'Программы и цены на огненное шоу для корпоратива',
-  programs: [MYSTIC, { ...TRAILER, highlight: true }, SHAMANISM, SORRY_MAX],
+  programs: [MYSTIC, { ...TRAILER, highlight: true }, SHAMANISM, RUSSIAN, SORRY_MAX],
   extrasTitle: 'Дополнительные эффекты',
   extras: EXTRAS,
   scenario: SCENARIO,
@@ -118,7 +119,7 @@ export const birthdayLanding: LandingData = {
     { icon: 'Camera', title: 'Яркие кадры', text: 'Огонь и искры — это красивые фото и видео для семейного архива.' },
   ],
   programsTitle: 'Программы и цены на огненное шоу для дня рождения',
-  programs: [{ ...MYSTIC, highlight: true }, TRAILER, SHAMANISM, SORRY_MAX],
+  programs: [{ ...MYSTIC, highlight: true }, TRAILER, SHAMANISM, RUSSIAN, SORRY_MAX],
   extrasTitle: 'Инсталляции и эффекты для праздника',
   extras: EXTRAS,
   scenario: SCENARIO,

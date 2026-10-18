@@ -215,8 +215,14 @@ const Index = () => {
   };
 
   const calculatePrice = () => {
-    const basePrice = calculatorData.programType === 'mystic' ? 20000 : 
-                      calculatorData.programType === 'trailer' ? 35000 : 38000;
+    const basePrices: Record<string, number> = {
+      mystic: 20000,
+      trailer: 35000,
+      shamanism: 38000,
+      russian: 43000,
+      sorrymax: 50000
+    };
+    const basePrice = basePrices[calculatorData.programType] ?? 20000;
     const durationMultiplier = parseInt(calculatorData.duration) / 6;
     const artistsBonus = (parseInt(calculatorData.artists) - 2) * 5000;
     const distanceBonus = parseInt(calculatorData.distance) * 35;
@@ -285,6 +291,27 @@ const Index = () => {
         "2 фонтана в подарок"
       ],
       suitable: "Идеально для тех, кто хочет удивить гостей необычным и мощным огненным шоу"
+    },
+    {
+      title: "Постановка «RUSSIAN STYLE»",
+      description: "Номер, пропитанный традициями, в новом формате: яркие костюмы, завораживающие синхронные элементы и море огня создают незабываемую атмосферу. Уникальные треки, которые будут напевать все, подчёркивают каждый момент, а пиротехнические эффекты в руках артистов добавляют магии",
+      duration: "10 минут",
+      facts: ["4 артиста", "6 видов огня", "4 вида пиротехники"],
+      price: "от 43 000 ₽",
+      image: "/russian-style.jpg",
+      videoUrl: "https://vk.ru/wall-203229964_1078",
+      features: [
+        "4 артиста на площадке",
+        "6 видов огненного реквизита",
+        "4 вида пиротехнического реквизита",
+        "Сценический свет и огненные чаши",
+        "Акустическая система 500Вт",
+        "Подготовка и демонтаж площадки",
+        "Работа техника на площадке",
+        "Трансфер артистов (г. Челябинск)",
+        "Церемония зажжения сердца + 2 фонтана в подарок"
+      ],
+      suitable: "Для тех, кто любит яркие костюмы, русские мотивы и массовые «подпевательные» треки: свадьбы, юбилеи, корпоративы, городские праздники"
     },
     {
       title: "Постановка «SORRY MAX»",
@@ -777,11 +804,11 @@ const Index = () => {
             Выберите подходящую программу для вашего мероприятия
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             {programs.map((program, index) => (
               <Card 
                 key={index} 
-                className="glass-card card-fire-hover rounded-xl overflow-hidden"
+                className="glass-card card-fire-hover rounded-xl overflow-hidden w-full md:w-[calc(33.333%-1.34rem)]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {program.image && (
@@ -960,7 +987,9 @@ const Index = () => {
                     {[
                       { value: 'mystic', label: 'MYSTIC', price: '20000₽' },
                       { value: 'trailer', label: 'TRAILER', price: '35000₽' },
-                      { value: 'shamanism', label: 'SHAMANISM', price: '38000₽' }
+                      { value: 'shamanism', label: 'SHAMANISM', price: '38000₽' },
+                      { value: 'russian', label: 'RUSSIAN STYLE', price: '43000₽' },
+                      { value: 'sorrymax', label: 'SORRY MAX', price: '50000₽' }
                     ].map((prog) => (
                       <button
                         key={prog.value}
