@@ -104,7 +104,7 @@ const BlogArticle7 = () => {
                     <h3 className="text-lg font-bold text-white">MYSTIC — 6 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Камерная атмосфера, подходит для свадьбы до 40 гостей. Романтичное выступление.</p>
-                  <p className="text-primary font-bold">от 18 000 ₽</p>
+                  <p className="text-primary font-bold">от 20 000 ₽</p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-primary/30 rounded-lg p-6 relative">
@@ -116,7 +116,7 @@ const BlogArticle7 = () => {
                     <h3 className="text-lg font-bold text-white">TRAILER — 10 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Оптимальный выбор для большинства свадеб. Динамичное шоу с несколькими блоками.</p>
-                  <p className="text-primary font-bold">от 30 000 ₽</p>
+                  <p className="text-primary font-bold">от 35 000 ₽</p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6">
@@ -127,7 +127,7 @@ const BlogArticle7 = () => {
                     <h3 className="text-lg font-bold text-white">SHAMANISM — 10 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Этническая стилистика, глубокое погружение в атмосферу. Для свадеб в загородном стиле.</p>
-                  <p className="text-primary font-bold">от 32 000 ₽</p>
+                  <p className="text-primary font-bold">от 38 000 ₽</p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6">
@@ -138,7 +138,7 @@ const BlogArticle7 = () => {
                     <h3 className="text-lg font-bold text-white">SORRY MAX — 15 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Полноценный спектакль. Для тех, кто хочет сделать шоу центральным событием вечера.</p>
-                  <p className="text-primary font-bold">от 45 000 ₽</p>
+                  <p className="text-primary font-bold">от 50 000 ₽</p>
                 </div>
               </div>
 

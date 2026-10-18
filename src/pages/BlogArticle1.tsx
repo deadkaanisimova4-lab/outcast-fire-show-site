@@ -198,19 +198,19 @@ const BlogArticle1 = () => {
                     <td className="p-4">Постановка «MYSTIC»</td>
                     <td className="p-4">6-8 минут</td>
                     <td className="p-4">2 человека</td>
-                    <td className="p-4 text-primary font-bold">18 000₽</td>
+                    <td className="p-4 text-primary font-bold">20 000₽</td>
                   </tr>
                   <tr className="border-b border-gray-800">
                     <td className="p-4">Постановка «TRAILER»</td>
                     <td className="p-4">10-12 минут</td>
                     <td className="p-4">3-4 человека</td>
-                    <td className="p-4 text-primary font-bold">30 000₽</td>
+                    <td className="p-4 text-primary font-bold">35 000₽</td>
                   </tr>
                   <tr>
                     <td className="p-4">Постановка «SHAMANISM»</td>
                     <td className="p-4">15-18 минут</td>
                     <td className="p-4">3-4 человека</td>
-                    <td className="p-4 text-primary font-bold">32 000₽</td>
+                    <td className="p-4 text-primary font-bold">38 000₽</td>
                   </tr>
                 </tbody>
               </table>

@@ -139,8 +139,8 @@ const BlogArticle8 = () => {
                     <h3 className="text-lg font-bold text-white">MYSTIC — 6 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Камерное романтичное шоу. Подойдёт для небольшой компании или семейного праздника.</p>
-                  <p className="text-gray-500 line-through text-sm">от 18 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 54 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-gray-500 line-through text-sm">от 20 000 ₽</p>
+                  <p className="text-primary font-bold text-lg">от 60 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-primary/30 rounded-lg p-6 relative">
@@ -152,8 +152,8 @@ const BlogArticle8 = () => {
                     <h3 className="text-lg font-bold text-white">TRAILER — 10 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Самый популярный выбор на корпоративы. Яркое динамичное шоу с запоминающимся финалом.</p>
-                  <p className="text-gray-500 line-through text-sm">от 30 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 90 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-gray-500 line-through text-sm">от 35 000 ₽</p>
+                  <p className="text-primary font-bold text-lg">от 105 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6">
@@ -164,8 +164,8 @@ const BlogArticle8 = () => {
                     <h3 className="text-lg font-bold text-white">SHAMANISM — 10 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Атмосферное шоу с этническим колоритом. Особенно выигрышно смотрится на открытом воздухе зимой.</p>
-                  <p className="text-gray-500 line-through text-sm">от 32 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 96 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-gray-500 line-through text-sm">от 38 000 ₽</p>
+                  <p className="text-primary font-bold text-lg">от 114 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
 
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6">
@@ -176,8 +176,8 @@ const BlogArticle8 = () => {
                     <h3 className="text-lg font-bold text-white">SORRY MAX — 15 мин</h3>
                   </div>
                   <p className="text-gray-400 mb-3">Полноценный спектакль. Для тех, кто хочет сделать Новый год по-настоящему незабываемым.</p>
-                  <p className="text-gray-500 line-through text-sm">от 45 000 ₽</p>
-                  <p className="text-primary font-bold text-lg">от 135 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
+                  <p className="text-gray-500 line-through text-sm">от 50 000 ₽</p>
+                  <p className="text-primary font-bold text-lg">от 150 000 ₽ <span className="text-xs text-gray-400 font-normal">(новогодний тариф)</span></p>
                 </div>
               </div>
 

@@ -174,7 +174,7 @@ const BlogArticle6 = () => {
                     <tr className="border-b border-gray-800">
                       <td className="py-3 px-4 font-bold">«Искра»</td>
                       <td className="py-3 px-4">6 мин, 2 артиста, огненные трюки</td>
-                      <td className="py-3 px-4 text-primary font-bold">от 18 000₽</td>
+                      <td className="py-3 px-4 text-primary font-bold">от 20 000₽</td>
                     </tr>
                     <tr className="border-b border-gray-800">
                       <td className="py-3 px-4 font-bold">«Пламя»</td>

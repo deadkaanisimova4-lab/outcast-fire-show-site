@@ -116,7 +116,7 @@ const BlogArticle4 = () => {
                     <Icon name="Flame" size={20} className="text-primary mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-white">Мини-шоу (6-8 минут):</strong>
-                      <p className="text-gray-400 mt-1">Для компаний до 30 человек. Два артиста, яркие трюки с огнём, финальный салют. Бюджет от 18 000₽. Отлично работает как «вишенка на торте» в конце вечера.</p>
+                      <p className="text-gray-400 mt-1">Для компаний до 30 человек. Два артиста, яркие трюки с огнём, финальный салют. Бюджет от 20 000₽. Отлично работает как «вишенка на торте» в конце вечера.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -222,7 +222,7 @@ const BlogArticle4 = () => {
                       <td className="py-3 px-4">Мини</td>
                       <td className="py-3 px-4">2</td>
                       <td className="py-3 px-4">6-8 мин</td>
-                      <td className="py-3 px-4 text-primary font-bold">от 18 000₽</td>
+                      <td className="py-3 px-4 text-primary font-bold">от 20 000₽</td>
                     </tr>
                     <tr className="border-b border-gray-800">
                       <td className="py-3 px-4">Стандарт</td>

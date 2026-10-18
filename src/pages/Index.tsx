@@ -215,8 +215,8 @@ const Index = () => {
   };
 
   const calculatePrice = () => {
-    const basePrice = calculatorData.programType === 'mystic' ? 18000 : 
-                      calculatorData.programType === 'trailer' ? 30000 : 32000;
+    const basePrice = calculatorData.programType === 'mystic' ? 20000 : 
+                      calculatorData.programType === 'trailer' ? 35000 : 38000;
     const durationMultiplier = parseInt(calculatorData.duration) / 6;
     const artistsBonus = (parseInt(calculatorData.artists) - 2) * 5000;
     const distanceBonus = parseInt(calculatorData.distance) * 35;
@@ -231,7 +231,7 @@ const Index = () => {
       description: "Парное выступление, наполненное огнём, искрами и драйвом современной музыки",
       duration: "6 минут",
       facts: ["2 артиста", "3 вида огня", "3 вида пиротехники"],
-      price: "от 18 000 ₽",
+      price: "от 20 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/fbe27aea-aceb-4026-8f94-b6364649606a.jpg",
       videoUrl: "https://vk.com/wall-203229964_921",
       features: [
@@ -251,7 +251,7 @@ const Index = () => {
       description: "Максимально современный, энергичный номер. Это взрыв спецэффектов в танце с огнем и пиротехникой. Современная хореография, популярная музыка - этот номер сформирован так, чтобы зритель получил WOW эффект",
       duration: "10 минут",
       facts: ["3-4 артиста", "5 видов огня", "4 вида пиротехники"],
-      price: "от 30 000 ₽",
+      price: "от 35 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/d866b78c-8f3d-44e1-9141-ffff953489c1.jpg",
       videoUrl: "https://vk.com/wall-203229964_930",
       features: [
@@ -271,7 +271,7 @@ const Index = () => {
       description: "Непередаваемая дикая энергия степей и огненных 'шаманов' прямиком с Урала. ЗДЕСЬ БУШУЕТ ОГОНЬ И ИСКРЫ",
       duration: "10 минут",
       facts: ["Эксклюзивный реквизит", "7 видов огня", "4 вида пиротехники"],
-      price: "от 32 000 ₽",
+      price: "от 38 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/628c5cb7-59af-4a33-a784-bde07524c600.jpg",
       videoUrl: "https://vk.com/wall-203229964_893",
       features: [
@@ -291,7 +291,7 @@ const Index = () => {
       description: "Грандиозное огненное представление с максимальным количеством реквизита и спецэффектов",
       duration: "15 минут",
       facts: ["8 видов огня", "6 видов пиротехники", "Сердце в подарок"],
-      price: "от 45 000 ₽",
+      price: "от 50 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/e10f8f2c-c80b-4853-b21f-35eb31ed4e9b.jpg",
       videoUrl: "https://vk.com/wall-203229964_836",
       features: [
@@ -958,9 +958,9 @@ const Index = () => {
                   <label className="block text-sm sm:text-base font-semibold mb-3">Тип программы</label>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                     {[
-                      { value: 'mystic', label: 'MYSTIC', price: '18000₽' },
-                      { value: 'trailer', label: 'TRAILER', price: '30000₽' },
-                      { value: 'shamanism', label: 'SHAMANISM', price: '32000₽' }
+                      { value: 'mystic', label: 'MYSTIC', price: '20000₽' },
+                      { value: 'trailer', label: 'TRAILER', price: '35000₽' },
+                      { value: 'shamanism', label: 'SHAMANISM', price: '38000₽' }
                     ].map((prog) => (
                       <button
                         key={prog.value}
@@ -1513,17 +1513,17 @@ const Index = () => {
             <a href="/ognennoe-shou-na-svadbu" className="block bg-card border border-primary/20 hover:border-primary/60 rounded-xl p-6 text-center transition-all">
               <Icon name="Heart" size={28} className="text-primary mx-auto mb-3" />
               <h3 className="font-bold mb-1">На свадьбу</h3>
-              <p className="text-sm text-muted-foreground">Программы и цены от 18 000 ₽</p>
+              <p className="text-sm text-muted-foreground">Программы и цены от 20 000 ₽</p>
             </a>
             <a href="/ognennoe-shou-na-korporativ" className="block bg-card border border-primary/20 hover:border-primary/60 rounded-xl p-6 text-center transition-all">
               <Icon name="Users" size={28} className="text-primary mx-auto mb-3" />
               <h3 className="font-bold mb-1">На корпоратив</h3>
-              <p className="text-sm text-muted-foreground">Программы и цены от 18 000 ₽</p>
+              <p className="text-sm text-muted-foreground">Программы и цены от 20 000 ₽</p>
             </a>
             <a href="/ognennoe-shou-na-den-rozhdeniya" className="block bg-card border border-primary/20 hover:border-primary/60 rounded-xl p-6 text-center transition-all">
               <Icon name="Gift" size={28} className="text-primary mx-auto mb-3" />
               <h3 className="font-bold mb-1">На день рождения</h3>
-              <p className="text-sm text-muted-foreground">Программы и цены от 18 000 ₽</p>
+              <p className="text-sm text-muted-foreground">Программы и цены от 20 000 ₽</p>
             </a>
           </div>
         </div>
