@@ -230,6 +230,7 @@ const Index = () => {
       title: "Постановка «MYSTIC»",
       description: "Парное выступление, наполненное огнём, искрами и драйвом современной музыки",
       duration: "6 минут",
+      facts: ["2 артиста", "3 вида огня", "3 вида пиротехники"],
       price: "от 18 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/fbe27aea-aceb-4026-8f94-b6364649606a.jpg",
       videoUrl: "https://vk.com/wall-203229964_921",
@@ -249,6 +250,7 @@ const Index = () => {
       title: "Постановка «TRAILER»",
       description: "Максимально современный, энергичный номер. Это взрыв спецэффектов в танце с огнем и пиротехникой. Современная хореография, популярная музыка - этот номер сформирован так, чтобы зритель получил WOW эффект",
       duration: "10 минут",
+      facts: ["3-4 артиста", "5 видов огня", "4 вида пиротехники"],
       price: "от 30 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/d866b78c-8f3d-44e1-9141-ffff953489c1.jpg",
       videoUrl: "https://vk.com/wall-203229964_930",
@@ -265,9 +267,10 @@ const Index = () => {
       suitable: "Отлично смотрится на свадьбе, корпоративе, выпускном, юбилее, вечеринке любого уровня"
     },
     {
-      title: "Постановка «SHAMANISM» 🔥✨",
+      title: "Постановка «SHAMANISM»",
       description: "Непередаваемая дикая энергия степей и огненных 'шаманов' прямиком с Урала. ЗДЕСЬ БУШУЕТ ОГОНЬ И ИСКРЫ",
       duration: "10 минут",
+      facts: ["Эксклюзивный реквизит", "7 видов огня", "4 вида пиротехники"],
       price: "от 32 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/628c5cb7-59af-4a33-a784-bde07524c600.jpg",
       videoUrl: "https://vk.com/wall-203229964_893",
@@ -278,8 +281,8 @@ const Index = () => {
         "Эксклюзивный реквизит (единственный в Челябинской области)",
         "Огненные чаши и сценический свет",
         "Акустическая система 500Вт",
-        "🎁 Церемония зажжения сердца в подарок",
-        "🎁 2 фонтана в подарок"
+        "Церемония зажжения сердца в подарок",
+        "2 фонтана в подарок"
       ],
       suitable: "Идеально для тех, кто хочет удивить гостей необычным и мощным огненным шоу"
     },
@@ -287,6 +290,7 @@ const Index = () => {
       title: "Постановка «SORRY MAX»",
       description: "Грандиозное огненное представление с максимальным количеством реквизита и спецэффектов",
       duration: "15 минут",
+      facts: ["8 видов огня", "6 видов пиротехники", "Сердце в подарок"],
       price: "от 45 000 ₽",
       image: "https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/e10f8f2c-c80b-4853-b21f-35eb31ed4e9b.jpg",
       videoUrl: "https://vk.com/wall-203229964_836",
@@ -297,7 +301,7 @@ const Index = () => {
         "Эксклюзивный реквизит (единственный в Челябинской области)",
         "Сценический свет и огненные чаши",
         "Акустическая система 500Вт",
-        "🎁 Церемония зажжения сердца в подарок"
+        "Церемония зажжения сердца в подарок"
       ],
       suitable: "Отлично смотрится на свадьбе, корпоративе, выпускном, юбилее, вечеринке любого уровня"
     }
@@ -664,7 +668,14 @@ const Index = () => {
       </nav>
 
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20 parallax-hero">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black parallax-bg"></div>
+        <img
+          src="https://cdn.poehali.dev/projects/72a14de5-7353-4caf-b47a-98d3caa2c09a/bucket/d866b78c-8f3d-44e1-9141-ffff953489c1.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover opacity-60 hero-photo"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/45 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/20 mix-blend-screen"></div>
         <div id="particles-container" className="absolute inset-0 overflow-hidden"></div>
         <div className="absolute inset-0 opacity-30 parallax-bg">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-float"></div>
@@ -785,9 +796,15 @@ const Index = () => {
                   </div>
                 )}
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4 animate-flicker">
-                    <Icon name="Flame" size={24} />
-                  </div>
+                  {program.facts && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {program.facts.map((fact) => (
+                        <span key={fact} className="text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/15 text-primary border border-primary/30">
+                          {fact}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <CardTitle className="text-xl sm:text-2xl">{program.title}</CardTitle>
                   <CardDescription className="text-sm sm:text-base">{program.description}</CardDescription>
                 </CardHeader>
@@ -1044,15 +1061,27 @@ const Index = () => {
                 <CardTitle className="text-2xl">Огненные постановки</CardTitle>
               </CardHeader>
               <CardContent className="p-8 pt-0">
-                <div className="space-y-6">
+                <div className="space-y-3">
                   {programs.map((program, index) => (
-                    <div key={index} className="flex items-center justify-between pb-6 border-b border-border last:border-0 last:pb-0">
+                    <a
+                      key={index}
+                      href={`https://vk.me/write-203229964?text=${encodeURIComponent(`Здравствуйте! Интересует ${program.title}. Подскажите, пожалуйста, свободна ли дата ____?`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between gap-4 p-4 rounded-xl border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:border-primary/60 hover:from-primary/15 transition-all"
+                    >
                       <div>
-                        <h3 className="text-xl font-bold mb-1">{program.title}</h3>
-                        <p className="text-sm text-muted-foreground">{program.duration}</p>
+                        <h3 className="text-lg sm:text-xl font-bold mb-1">{program.title}</h3>
+                        <p className="text-sm text-muted-foreground flex items-center gap-1.5">
+                          <Icon name="Clock" size={14} className="text-primary" />
+                          {program.duration}
+                        </p>
                       </div>
-                      <div className="text-2xl font-bold text-primary">{program.price}</div>
-                    </div>
+                      <div className="text-right">
+                        <div className="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent whitespace-nowrap">{program.price}</div>
+                        <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">Заказать →</span>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </CardContent>
@@ -1063,14 +1092,14 @@ const Index = () => {
                 <CardTitle className="text-2xl">Инсталляции и оформление</CardTitle>
               </CardHeader>
               <CardContent className="p-8 pt-0">
-                <div className="space-y-6">
+                <div className="space-y-3">
                   {installations.map((installation, index) => (
-                    <div key={index} className="flex items-center justify-between pb-6 border-b border-border last:border-0 last:pb-0">
+                    <div key={index} className="flex items-center justify-between gap-4 p-4 rounded-xl border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent">
                       <div>
-                        <h3 className="text-xl font-bold mb-1">{installation.title}</h3>
+                        <h3 className="text-lg sm:text-xl font-bold mb-1">{installation.title}</h3>
                         <p className="text-sm text-muted-foreground">{installation.duration}</p>
                       </div>
-                      <div className="text-2xl font-bold text-primary">{installation.price}</div>
+                      <div className="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-right">{installation.price}</div>
                     </div>
                   ))}
                 </div>
@@ -1328,8 +1357,8 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-6">Свяжитесь с нами</h3>
               
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="MapPin" size={20} className="text-primary" />
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/30">
+                  <Icon name="MapPin" size={22} className="text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Адрес</h4>
@@ -1338,8 +1367,8 @@ const Index = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Phone" size={20} className="text-primary" />
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/30">
+                  <Icon name="Phone" size={22} className="text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Телефон</h4>
@@ -1348,8 +1377,8 @@ const Index = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Clock" size={20} className="text-primary" />
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/30">
+                  <Icon name="Clock" size={22} className="text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Время работы</h4>
@@ -1386,9 +1415,9 @@ const Index = () => {
               </div>
             </div>
 
-            <Card className="bg-card border-primary/20">
+            <Card className="bg-card border-2 border-primary/40 shadow-2xl shadow-primary/20">
               <CardHeader>
-                <CardTitle>Оставить заявку</CardTitle>
+                <CardTitle className="text-2xl fire-glow">Оставить заявку</CardTitle>
                 <CardDescription>Заполните форму и мы свяжемся с вами</CardDescription>
               </CardHeader>
               <CardContent>
@@ -1550,10 +1579,10 @@ const Index = () => {
         </div>
       </section>
 
-      <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3">
+      <div className="fixed bottom-4 left-3 md:bottom-6 md:left-6 z-50 flex flex-col gap-2 md:gap-3 opacity-80 md:opacity-100">
         <button
           onClick={toggleSound}
-          className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/50 transition-all hover-scale"
+          className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/50 transition-all hover-scale"
           aria-label={isSoundPlaying ? "Выключить звук" : "Включить звук"}
         >
           <Icon name={isSoundPlaying ? "Volume2" : "VolumeX"} size={20} />
@@ -1561,7 +1590,7 @@ const Index = () => {
         {showScrollTop && (
           <button
             onClick={scrollToTop}
-            className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
+            className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all hover-scale"
             aria-label="Наверх"
           >
             <Icon name="ArrowUp" size={20} />
@@ -1569,7 +1598,7 @@ const Index = () => {
         )}
       </div>
 
-      <footer className="bg-card border-t border-primary/20 py-6 md:py-8">
+      <footer className="bg-card border-t border-primary/20 py-6 md:py-8 pb-24 md:pb-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">

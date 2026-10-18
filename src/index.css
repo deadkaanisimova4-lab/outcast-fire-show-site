@@ -521,3 +521,18 @@
       0 0 80px rgba(255, 69, 0, 0.1);
   }
 }
+
+
+@keyframes hero-zoom {
+  from { transform: scale(1) translateY(0); }
+  to { transform: scale(1.12) translateY(-1.5%); }
+}
+
+.hero-photo {
+  animation: hero-zoom 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo { animation: none; }
+}

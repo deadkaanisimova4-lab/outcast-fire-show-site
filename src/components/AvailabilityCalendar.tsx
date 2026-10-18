@@ -117,7 +117,7 @@ const AvailabilityCalendar = () => {
             if (status === 'free') statusClasses = 'bg-green-500/20 text-green-400 hover:bg-green-500/30 cursor-pointer';
             else if (status === 'limited') statusClasses = 'bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30 cursor-pointer';
             else if (status === 'busy') statusClasses = 'bg-red-500/20 text-red-400 cursor-not-allowed';
-            else statusClasses = 'text-white hover:bg-primary/20 cursor-pointer';
+            else statusClasses = 'text-white border border-dashed border-white/20 hover:bg-primary/20 cursor-pointer';
           }
 
           return (
@@ -139,17 +139,19 @@ const AvailabilityCalendar = () => {
         <p className="text-center text-xs text-muted-foreground mt-4">Загрузка...</p>
       )}
 
-      {selectedInfo && (
+      {selectedDate && (
         <div className="mt-4 pt-4 border-t border-border text-center animate-fade-in">
           <p className="text-sm text-white font-semibold mb-1">
-            {new Date(selectedDate!).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' })}
+            {new Date(selectedDate).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' })}
           </p>
           <p className="text-xs text-muted-foreground mb-4">
-            Свободно: {selectedInfo.show_limit} шоу, {selectedInfo.installation_limit} инсталляций
+            {selectedInfo
+              ? `Свободно: ${selectedInfo.show_limit} шоу, ${selectedInfo.installation_limit} инсталляций`
+              : 'Свободна ли дата, уточним после вашего сообщения'}
           </p>
           <a
             href={`https://vk.me/write-203229964?text=${encodeURIComponent(
-              `Здравствуйте! Хочу забронировать дату ${new Date(selectedDate!).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })}. Расскажите, пожалуйста, что нужно для оформления.`
+              `Здравствуйте! Хочу забронировать дату ${new Date(selectedDate).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })}. Расскажите, пожалуйста, что нужно для оформления.`
             )}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -161,7 +163,7 @@ const AvailabilityCalendar = () => {
         </div>
       )}
 
-      <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-border text-xs text-muted-foreground">
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-4 pt-4 border-t border-border text-xs text-muted-foreground">
         <div className="flex items-center gap-1.5">
           <span className="w-3 h-3 rounded bg-green-500/40" />
           Свободно
@@ -173,6 +175,10 @@ const AvailabilityCalendar = () => {
         <div className="flex items-center gap-1.5">
           <span className="w-3 h-3 rounded bg-red-500/40" />
           Занято
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="w-3 h-3 rounded border border-dashed border-white/40" />
+          Уточняйте
         </div>
       </div>
     </div>

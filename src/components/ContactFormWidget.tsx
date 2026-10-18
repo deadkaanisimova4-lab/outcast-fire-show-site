@@ -62,24 +62,22 @@ const ContactFormWidget = () => {
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-6 right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="fixed bottom-4 right-3 md:bottom-6 md:right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-500">
         <Button
           onClick={() => setIsOpen(true)}
-          className="h-16 px-6 rounded-full shadow-2xl bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-110 transition-all duration-300 flex items-center gap-3"
+          className="h-12 px-4 md:h-16 md:px-6 rounded-full shadow-2xl bg-gradient-to-r from-primary to-accent hover:opacity-90 hover:scale-110 transition-all duration-300 flex items-center gap-3"
         >
-          <Icon name="Flame" size={24} className="animate-pulse" />
-          <span className="font-bold text-base">Заказать шоу</span>
+          <Icon name="Flame" size={20} className="animate-pulse" />
+          <span className="font-bold text-sm md:text-base">Заказать шоу</span>
         </Button>
-        <div className="absolute -top-2 -right-2 h-7 w-7 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg">
-          🔥
-        </div>
+        <div className="absolute -top-1.5 -right-1.5 h-4 w-4 md:h-5 md:w-5 bg-red-500 rounded-full animate-bounce shadow-lg"></div>
       </div>
     );
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300">
-      <Card className="w-96 bg-card/95 backdrop-blur-lg border-2 border-primary/30 shadow-2xl">
+    <div className="fixed bottom-4 right-3 md:bottom-6 md:right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300 max-w-[calc(100vw-1.5rem)]">
+      <Card className="w-96 max-w-full bg-card/95 backdrop-blur-lg border-2 border-primary/30 shadow-2xl">
         <CardContent className="p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
