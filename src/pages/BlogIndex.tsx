@@ -91,6 +91,14 @@ const BlogContent = () => {
       image: '/russian-style-cover.jpg',
       date: '18 октября 2026',
       readTime: '6 минут'
+    },
+    {
+      id: 'ognennoe-shou-na-yubilej-v-chelyabinske',
+      title: 'Огненное шоу на юбилей в Челябинске: как выбрать программу и не прогадать',
+      description: 'Какую программу выбрать для юбилея 30, 50 или 60 лет, где провести шоу, что добавить для личного момента и сколько это стоит.',
+      image: '/yubilej-cover.jpg',
+      date: '18 октября 2026',
+      readTime: '7 минут'
     }
   ];
 
