@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "@/lib/router-compat";
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
-import PageMeta from '@/components/PageMeta';
 
 export interface LandingProgram {
   name: string;
@@ -33,28 +32,15 @@ export interface LandingData {
   related: { to: string; label: string }[];
 }
 
-const SITE = 'https://xn----74-k4dma6dbagfc4ewd.xn--p1ai';
 const VK_WRITE = 'https://vk.me/write-203229964';
 
 const formatPrice = (n: number) => `от ${n.toLocaleString('ru-RU')} ₽`;
 
 const EventLanding = ({ data }: { data: LandingData }) => {
   const orderLink = `${VK_WRITE}?text=${encodeURIComponent(data.orderText)}`;
-  const offers = data.programs.map((p) => ({ name: p.name, description: p.description, price: p.price }));
 
   return (
     <>
-      <PageMeta
-        title={data.metaTitle}
-        description={data.metaDescription}
-        keywords={data.keywords}
-        url={`${SITE}/${data.slug}`}
-        image={data.image}
-        breadcrumbName={data.breadcrumbName}
-        serviceName={data.h1}
-        offers={offers}
-        faq={data.faq}
-      />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
         <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">
           <nav className="container mx-auto px-4 py-4 flex items-center justify-between gap-3">

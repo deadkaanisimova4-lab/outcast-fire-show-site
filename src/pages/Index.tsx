@@ -924,7 +924,7 @@ const Index = () => {
                     )}
                     {installation.videoUrls && (
                       <div className="space-y-2">
-                        {installation.videoUrls.map((video: { url: string; title: string }, vidIdx: number) => (
+                        {installation.videoUrls.map((video: { url: string; label: string }, vidIdx: number) => (
                           <a 
                             key={vidIdx}
                             href={video.url}
