@@ -13,14 +13,13 @@ import appCss from "@/index.css?url";
 
 const TITLE = "Огненное шоу Челябинск 🔥 Артисты фаер-шоу на праздник, свадьбу, корпоратив | OUTCAST Fire Show";
 const DESCRIPTION =
-    "⭐ Огненное шоу и артисты фаер-шоу в Челябинске от профессионалов OUTCAST Fire Show. Шоу-программа на свадьбу, корпоратив, день рождения, юбилей и любой праздник. 7+ лет опыта, 500+ выступлений. Цены от 20000₽. Заказать ☎ +7 (908) 574-08-13";
+    "Огненное шоу в Челябинске: артисты фаер-шоу на свадьбу, корпоратив, юбилей и день рождения. 7+ лет опыта, 500+ выступлений. Программы от 20 000 ₽. Звоните: +7 (908) 574-08-13";
 const KEYWORDS =
     "огненное шоу челябинск, файер шоу челябинск, fire show челябинск, заказать огненное шоу, заказать артистов на праздник, артисты фаер-шоу, артисты огненного шоу челябинск, шоу-программа на праздник, выступление артистов с огнём, файер шоу на свадьбу, огненное шоу на корпоратив, шоу на праздник, файершоу на торжество, артисты огненного шоу, outcast fire show, пиротехническое шоу, огненное шоу на день рождения, файер шоу на юбилей, огненное шоу магнитогорск, файер шоу миасс, огненное шоу златоуст, файер шоу копейск, огненное шоу снежинск, файер шоу озерск, огненное шоу троицк, файер шоу сатка, огненное шоу южноуральск, файер шоу коркино, огненное шоу уфа, файер шоу стерлитамак, огненное шоу салават, файер шоу нефтекамск, огненное шоу октябрьский, файер шоу белорецк, огненное шоу туймазы, файер шоу ишимбай, огненное шоу мелеуз, развлечения на свадьбу, шоу программа на праздник, артисты на корпоратив, танцы с огнем, файершоу недорого, огненное шоу башкирия, заказать шоу на любой праздник, профессиональные артисты фаер-шоу";
 const OG_TITLE = "Огненное шоу Челябинск — Заказать файер-шоу | OUTCAST Fire Show";
 const OG_DESCRIPTION =
-    "Профессиональное огненное шоу для вашего праздника. 7+ лет опыта, 500+ выступлений. Цены от 20000₽. ☎ +7 (908) 574-08-13";
-const OG_IMAGE = "https://cdn.poehali.dev/files/6542e7b2-83ab-46b5-8dee-6d7f743b92c4.jpg";
-const FAVICON = "https://cdn.poehali.dev/files/6542e7b2-83ab-46b5-8dee-6d7f743b92c4.jpg";
+    "Профессиональное огненное шоу для вашего праздника в Челябинске. 7+ лет опыта, 500+ выступлений. Программы от 20 000 ₽.";
+const OG_IMAGE = "https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/og-cover.jpg";
 
 const METRIKA = `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 m[i].l=1*new Date();
@@ -60,7 +59,7 @@ export const Route = createRootRoute({
             {property: "og:site_name", content: "OUTCAST Fire Show"},
             {name: "twitter:card", content: "summary_large_image"},
             {name: "twitter:title", content: "OUTCAST Fire Show — Огненное шоу в Челябинске"},
-            {name: "twitter:description", content: "Профессиональное огненное шоу для вашего праздника. 7+ лет опыта, 500+ выступлений."},
+            {name: "twitter:description", content: OG_DESCRIPTION},
             {name: "twitter:image", content: OG_IMAGE},
             ...PLATFORM_META,
         ],
@@ -70,8 +69,10 @@ export const Route = createRootRoute({
             {rel: "preconnect", href: "https://mc.yandex.ru"},
             {rel: "preconnect", href: "https://fonts.googleapis.com", crossOrigin: "anonymous"},
             {rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous"},
-            {rel: "icon", type: "image/jpeg", href: FAVICON},
-            {rel: "apple-touch-icon", href: FAVICON},
+            {rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png"},
+            {rel: "icon", type: "image/png", sizes: "48x48", href: "/favicon-48.png"},
+            {rel: "icon", type: "image/png", sizes: "192x192", href: "/icon-192.png"},
+            {rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png"},
             {rel: "alternate", href: "https://xn----74-k4dma6dbagfc4ewd.xn--p1ai", hrefLang: "ru"},
         ],
         // IMPORTANT: DO NOT REMOVE PLATFORM SCRIPTS AND THE DEV HMR CLIENT!
