@@ -10,7 +10,7 @@ export const Route = createFileRoute('/blog/top-5-ploshchadok-v-chelyabinske-dly
     "url": "https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/blog/top-5-ploshchadok-v-chelyabinske-dlya-faier-shou",
     "datePublished": "2024-11-25",
     "dateModified": "2026-02-20",
-    "image": "https://cdn.poehali.dev/files/fa23ea1f-f8fe-44fa-8d12-2be4b02d84d4.jpg"
+    "image": "https://xn----74-k4dma6dbagfc4ewd.xn--p1ai/og/top-5-ploshchadok-v-chelyabinske-dlya-faier-shou.jpg"
 }),
   component: BlogArticle2,
 });
